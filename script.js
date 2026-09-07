@@ -242,13 +242,24 @@ function initGalleryLightbox() {
    ========================================================================== */
 function initQuotationForm() {
   const form = document.getElementById('quoteForm');
+  const successCard = document.getElementById('quoteSuccessCard');
   if (!form) return;
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('quoteName')?.value.trim() || '';
-    const phone = document.getElementById('quotePhone')?.value.trim() || '';
+    const nameInput = document.getElementById('quoteName');
+    const phoneInput = document.getElementById('quotePhone');
+    const name = nameInput?.value.trim() || '';
+    const phone = phoneInput?.value.trim() || '';
+
+    if (!name || !phone) {
+      if (!name && nameInput) nameInput.focus();
+      else if (!phone && phoneInput) phoneInput.focus();
+      showToast("Please enter your Name and Phone Number to request a quote. ✨");
+      return;
+    }
+
     const email = document.getElementById('quoteEmail')?.value.trim() || '';
     const date = document.getElementById('quoteDate')?.value.trim() || '';
     const eventType = document.getElementById('quoteType')?.value || '';
@@ -278,13 +289,63 @@ function initQuotationForm() {
     const whatsappUrl = `https://wa.me/97471716286?text=${encodedMessage}`;
 
     // Show Toast Confirmation
-    showToast("Opening WhatsApp to send your quote request to +974 71716286... ✨");
+    showToast("Opening WhatsApp with your customized quote details... ✨");
 
-    // Open WhatsApp after brief delay
-    setTimeout(() => {
-      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-    }, 600);
+    // Display In-Page Success Card
+    if (successCard) {
+      successCard.innerHTML = `
+        <div class="success-card-content text-center">
+          <div class="success-icon-badge">🎉</div>
+          <h3 class="success-title">Quote Request Ready!</h3>
+          <p class="success-subtitle">Thank you, <strong>${escapeHtml(name)}</strong>! We have formatted your event inquiry for Spark Joy Event Management Qatar.</p>
+          
+          <div class="quote-summary-box">
+            <div class="summary-item"><strong>Phone / WhatsApp:</strong> ${escapeHtml(phone)}</div>
+            ${services.length ? `<div class="summary-item"><strong>Services Needed:</strong> ${escapeHtml(services.join(', '))}</div>` : ''}
+            ${eventType ? `<div class="summary-item"><strong>Event Type:</strong> ${escapeHtml(eventType)}</div>` : ''}
+            ${notes ? `<div class="summary-item"><strong>Notes:</strong> ${escapeHtml(notes)}</div>` : ''}
+          </div>
+
+          <div class="success-actions">
+            <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-block-sm">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 13.85 2.5 15.58 3.38 17.08L2 22L7.08 20.62C8.54 21.5 10.22 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C10.42 20 8.93 19.57 7.64 18.82L7.33 18.63L4.31 19.42L5.11 16.48L4.9 16.15C4.08 14.82 3.65 13.27 3.65 11.65C3.65 7.04 7.39 3.3 12 3.3C16.61 3.3 20.35 7.04 20.35 11.65C20.35 16.26 16.61 20 12 20ZM16.32 14.18C16.08 14.06 14.9 13.48 14.68 13.4C14.46 13.32 14.3 13.28 14.14 13.52C13.98 13.76 13.52 14.3 13.38 14.46C13.24 14.62 13.1 14.64 12.86 14.52C12.62 14.4 11.85 14.15 10.94 13.34C10.23 12.71 9.75 11.93 9.61 11.69C9.47 11.45 9.6 11.32 9.72 11.2C9.83 11.09 9.97 10.91 10.09 10.77C10.21 10.63 10.37 10.07 10.31 9.95C10.25 9.83 9.79 8.7 9.6 8.24C9.41 7.79 9.22 7.85 9.08 7.84C8.95 7.83 8.8 7.83 8.65 7.83C8.5 7.83 8.26 7.89 8.06 8.11C7.86 8.33 7.3 8.85 7.3 9.92C7.3 10.99 8.08 12.02 8.19 12.17C8.3 12.32 9.72 14.5 11.91 15.45C12.43 15.68 12.84 15.82 13.16 15.92C13.8 16.12 14.38 16.09 14.84 16.02C15.35 15.94 16.41 15.38 16.63 14.76C16.85 14.14 16.85 13.61 16.78 13.5C16.72 13.38 16.56 13.3 16.32 14.18Z"/>
+              </svg>
+              TAP TO OPEN WHATSAPP CHAT
+            </a>
+            <button type="button" id="resetQuoteBtn" class="btn btn-outline btn-sm" style="margin-top: 12px;">Send Another Inquiry</button>
+          </div>
+        </div>
+      `;
+      form.classList.add('hidden');
+      successCard.classList.remove('hidden');
+
+      const resetBtn = document.getElementById('resetQuoteBtn');
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          form.reset();
+          form.classList.remove('hidden');
+          successCard.classList.add('hidden');
+          const notice = document.getElementById('serviceSelectedNotice');
+          if (notice) notice.classList.add('hidden');
+        });
+      }
+    }
+
+    // Open WhatsApp synchronously
+    const win = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    if (!win || win.closed || typeof win.closed === 'undefined') {
+      window.location.href = whatsappUrl;
+    }
   });
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 }
 
 /* ==========================================================================
@@ -293,32 +354,58 @@ function initQuotationForm() {
 function initServiceQuoteButtons() {
   const serviceQuoteBtns = document.querySelectorAll('.service-quote-btn');
   const contactSection = document.getElementById('contact');
-  const notesInput = document.getElementById('quoteNotes');
+  const noticeBox = document.getElementById('serviceSelectedNotice');
+  const noticeTitle = document.getElementById('selectedServiceTitle');
+  const instantWhatsappBtn = document.getElementById('instantWhatsappBtn');
 
   serviceQuoteBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
       const serviceName = btn.getAttribute('data-service');
-      
+      const notesInput = document.getElementById('quoteNotes');
+
       if (serviceName) {
-        // Pre-check service checkbox if matching
+        // Pre-check matching service checkbox
         const matchingCheckbox = Array.from(document.querySelectorAll('input[name="services"]'))
-          .find(cb => cb.value.toLowerCase().includes(serviceName.toLowerCase()));
+          .find(cb => cb.value.toLowerCase().includes(serviceName.toLowerCase()) || serviceName.toLowerCase().includes(cb.value.toLowerCase()));
 
         if (matchingCheckbox) {
           matchingCheckbox.checked = true;
-        } else if (notesInput) {
-          notesInput.value = `Interested in: ${serviceName}`;
+        }
+        if (notesInput) {
+          notesInput.value = `Interested in quote for: ${serviceName}`;
+        }
+
+        // Show Service Selected Notice above form
+        if (noticeBox && noticeTitle) {
+          noticeTitle.textContent = serviceName;
+          noticeBox.classList.remove('hidden');
+
+          if (instantWhatsappBtn) {
+            const quickMsg = encodeURIComponent(`Hello Spark Joy Event Management! ✨ I am asking for a quotation for ${serviceName} in Qatar.`);
+            instantWhatsappBtn.href = `https://wa.me/97471716286?text=${quickMsg}`;
+          }
         }
       }
 
       if (contactSection) {
-        e.preventDefault();
-        const headerHeight = document.querySelector('.header').offsetHeight || 88;
+        const header = document.querySelector('.header');
+        const headerHeight = header ? header.offsetHeight : 88;
         const targetPosition = contactSection.offsetTop - headerHeight + 10;
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
         });
+
+        // Pulse glow on contact wrapper
+        const wrapper = contactSection.querySelector('.contact-wrapper');
+        if (wrapper) {
+          wrapper.classList.remove('pulse-glow');
+          void wrapper.offsetWidth;
+          wrapper.classList.add('pulse-glow');
+        }
       }
     });
   });
@@ -812,10 +899,31 @@ function initServiceSlideGallery() {
     // Update quote button behavior
     if (quoteBtn) {
       quoteBtn.onclick = (e) => {
+        e.preventDefault();
         closeGallery();
-        const notesInput = document.getElementById('notes');
+
+        const serviceName = galleryData.serviceName;
+        const matchingCheckbox = Array.from(document.querySelectorAll('input[name="services"]'))
+          .find(cb => cb.value.toLowerCase().includes(serviceName.toLowerCase()) || serviceName.toLowerCase().includes(cb.value.toLowerCase()));
+
+        if (matchingCheckbox) {
+          matchingCheckbox.checked = true;
+        }
+
+        const notesInput = document.getElementById('quoteNotes');
         if (notesInput) {
-          notesInput.value = `Inquiry regarding ${galleryData.serviceName}: ${photo.caption}`;
+          notesInput.value = `Inquiry regarding ${serviceName}: ${photo.caption}`;
+        }
+
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          const header = document.querySelector('.header');
+          const headerHeight = header ? header.offsetHeight : 88;
+          const targetPosition = contactSection.offsetTop - headerHeight + 10;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
         }
       };
     }
