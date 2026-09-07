@@ -1014,6 +1014,79 @@ h1, h2, h3, h4, .font-heading {
 }
 
 /* Service Photo Slide Lightbox Modal Styling */
+/* Service Card Sample Design Thumbnails */
+.service-sample-designs {
+  margin-top: 14px;
+  margin-bottom: 12px;
+  background-color: #FAFAF8;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  border: 1px solid rgba(233, 45, 114, 0.12);
+}
+
+.sample-designs-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: var(--primary-pink);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sample-thumbnails-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  padding-top: 2px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--soft-pink) transparent;
+}
+
+.sample-thumbnails-row::-webkit-scrollbar {
+  height: 4px;
+}
+
+.sample-thumbnails-row::-webkit-scrollbar-thumb {
+  background: var(--soft-pink);
+  border-radius: 4px;
+}
+
+.sample-thumb-item {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #E2E8F0;
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+  background-color: #FFF;
+}
+
+.sample-thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.sample-thumb-item:hover {
+  border-color: var(--primary-pink);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(233, 45, 114, 0.25);
+}
+
+.sample-thumb-item:hover img {
+  transform: scale(1.1);
+}
+
 .service-slide-modal {
   position: fixed;
   inset: 0;
