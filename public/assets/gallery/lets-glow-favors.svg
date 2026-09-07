@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="glowBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#glowBg)"/>
+
+  <!-- Glowing Neon Stars & Circles -->
+  <circle cx="100" cy="100" r="14" fill="#22C55E" opacity="0.8"/>
+  <circle cx="700" cy="120" r="16" fill="#A855F7" opacity="0.8"/>
+  <circle cx="150" cy="480" r="18" fill="#EC4899" opacity="0.8"/>
+  <circle cx="680" cy="450" r="12" fill="#EAB308" opacity="0.8"/>
+
+  <!-- Black & Rainbow Neon Favor Bags ("Let's Glow - My Party Glow Israa") -->
+  <g transform="translate(130, 150)">
+    <path d="M 30 50 Q 60 10 90 50" stroke="#22C55E" stroke-width="5" fill="none"/>
+    <rect x="10" y="50" width="100" height="210" rx="16" fill="#020617" stroke="#22C55E" stroke-width="4"/>
+    <!-- Rainbow Splash -->
+    <path d="M 20 120 L 100 120" stroke="#EC4899" stroke-width="8"/>
+    <path d="M 20 135 L 100 135" stroke="#EAB308" stroke-width="8"/>
+    <path d="M 20 150 L 100 150" stroke="#3B82F6" stroke-width="8"/>
+    <text x="60" y="195" font-family="sans-serif" font-size="10" font-weight="bold" fill="#22C55E" text-anchor="middle">ISRAA GLOW</text>
+  </g>
+
+  <!-- Center Featured Bag -->
+  <g transform="translate(310, 110)">
+    <path d="M 40 60 Q 80 10 120 60" stroke="#EC4899" stroke-width="6" fill="none"/>
+    <rect x="10" y="60" width="150" height="260" rx="20" fill="#020617" stroke="#EC4899" stroke-width="4"/>
+    <!-- Neon Text "LET'S GLOW" -->
+    <rect x="25" y="110" width="120" height="40" rx="8" fill="#1E1B4B" stroke="#22C55E" stroke-width="3"/>
+    <text x="85" y="136" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="900" fill="#22C55E" text-anchor="middle">LET'S GLOW</text>
+
+    <!-- Neon Splatter -->
+    <circle cx="50" cy="180" r="8" fill="#EC4899"/>
+    <circle cx="120" cy="190" r="12" fill="#EAB308"/>
+    <circle cx="80" cy="210" r="10" fill="#3B82F6"/>
+
+    <text x="85" y="250" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">MY PARTY GLOW</text>
+  </g>
+
+  <!-- Right Bag -->
+  <g transform="translate(550, 150)">
+    <path d="M 30 50 Q 60 10 90 50" stroke="#EAB308" stroke-width="5" fill="none"/>
+    <rect x="10" y="50" width="100" height="210" rx="16" fill="#020617" stroke="#EAB308" stroke-width="4"/>
+    <path d="M 20 120 L 100 120" stroke="#A855F7" stroke-width="8"/>
+    <path d="M 20 135 L 100 135" stroke="#22C55E" stroke-width="8"/>
+  </g>
+
+  <!-- Neon Accessories: Glow Pens, Slime Jars & Activity Packs -->
+  <g transform="translate(200, 390)">
+    <rect x="0" y="0" width="80" height="50" rx="10" fill="#22C55E" stroke="#FFFFFF" stroke-width="2"/>
+    <text x="40" y="30" font-family="sans-serif" font-size="10" font-weight="bold" fill="#020617" text-anchor="middle">GLOW PENS</text>
+  </g>
+
+  <!-- Title Badge -->
+  <rect x="150" y="510" width="500" height="50" rx="25" fill="#1E1B4B" stroke="#22C55E" stroke-width="2"/>
+  <text x="400" y="542" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="18" fill="#22C55E" text-anchor="middle" letter-spacing="2">LET'S GLOW PARTY PACKAGES</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="olafBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBF8FF"/>
+      <stop offset="100%" stop-color="#BEE3F8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#olafBg)"/>
+
+  <!-- Silver shimmer background grid -->
+  <g stroke="#CBD5E0" stroke-width="1" opacity="0.3">
+    <line x1="100" y1="0" x2="100" y2="600"/>
+    <line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="300" y1="0" x2="300" y2="600"/>
+    <line x1="500" y1="0" x2="500" y2="600"/>
+    <line x1="600" y1="0" x2="600" y2="600"/>
+    <line x1="700" y1="0" x2="700" y2="600"/>
+  </g>
+
+  <!-- Olaf Head & Body -->
+  <!-- Bottom Body -->
+  <path d="M 320 360 Q 280 440 350 480 Q 450 500 480 440 Q 500 370 420 350 Z" fill="#FFFFFF" stroke="#3182CE" stroke-width="4"/>
+  <!-- Middle Body -->
+  <ellipse cx="400" cy="300" rx="65" ry="55" fill="#FFFFFF" stroke="#3182CE" stroke-width="4"/>
+  <!-- Head -->
+  <path d="M 360 160 Q 350 240 400 250 Q 450 240 440 160 Q 400 130 360 160 Z" fill="#FFFFFF" stroke="#3182CE" stroke-width="4"/>
+
+  <!-- Black Glitter Buttons -->
+  <circle cx="400" cy="290" r="14" fill="#1A202C"/>
+  <circle cx="390" cy="390" r="16" fill="#1A202C"/>
+  <circle cx="410" cy="440" r="15" fill="#1A202C"/>
+
+  <!-- Carrot Nose -->
+  <polygon points="400,195 480,210 400,205" fill="#ED8936" stroke="#C05621" stroke-width="2"/>
+
+  <!-- Eyes & Mouth -->
+  <circle cx="380" cy="175" r="10" fill="#1A202C"/>
+  <circle cx="420" cy="175" r="10" fill="#1A202C"/>
+  <circle cx="378" cy="172" r="3" fill="#FFFFFF"/>
+  <circle cx="418" cy="172" r="3" fill="#FFFFFF"/>
+
+  <!-- Big Happy Tooth -->
+  <rect x="390" y="215" width="20" height="15" rx="2" fill="#FFFFFF" stroke="#CBD5E0" stroke-width="1"/>
+
+  <!-- Twig Hair -->
+  <path d="M 395 140 L 385 90 M 400 138 L 400 80 M 405 140 L 420 95" stroke="#744210" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Twig Arms -->
+  <path d="M 345 285 L 250 230 M 250 230 L 230 210 M 250 230 L 240 245" stroke="#744210" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 455 285 L 550 250 M 550 250 L 570 230 M 550 250 L 565 265" stroke="#744210" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Piñata Fringed Stick at bottom -->
+  <rect x="200" y="500" width="400" height="16" rx="8" fill="#FFFFFF" stroke="#3182CE" stroke-width="3"/>
+
+  <!-- Title Badge -->
+  <rect x="150" y="535" width="500" height="45" rx="22" fill="#2B6CB0"/>
+  <text x="400" y="563" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">FROZEN OLAF SNOWMAN PIÑATA</text>
+</svg>

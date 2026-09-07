@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cookieGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8E7" />
+      <stop offset="100%" stop-color="#FFE8B5" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#cookieGrad)"/>
+
+  <!-- Workshop Table & Cookie Trays -->
+  <rect x="100" y="220" width="600" height="240" rx="20" fill="#FFFFFF" stroke="#111B3A" stroke-width="4"/>
+
+  <!-- Cookies on tray -->
+  <!-- Cookie 1: Star with pink icing -->
+  <g transform="translate(200, 280)">
+    <path d="M 40 0 L 52 28 L 80 32 L 60 52 L 65 80 L 40 65 L 15 80 L 20 52 L 0 32 L 28 28 Z" fill="#FFD166" stroke="#111B3A" stroke-width="3"/>
+    <path d="M 40 10 L 48 30 L 68 33 L 53 48 L 57 68 L 40 57 L 23 68 L 27 48 L 12 33 L 32 30 Z" fill="#E92D72"/>
+    <circle cx="40" cy="40" r="4" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Cookie 2: Gingerbread / Person -->
+  <g transform="translate(360, 270)">
+    <circle cx="40" cy="20" r="18" fill="#FF9F1C" stroke="#111B3A" stroke-width="3"/>
+    <rect x="25" y="38" width="30" height="40" rx="8" fill="#FF9F1C" stroke="#111B3A" stroke-width="3"/>
+    <!-- Icing Details -->
+    <circle cx="34" cy="16" r="2" fill="#111B3A"/>
+    <circle cx="46" cy="16" r="2" fill="#111B3A"/>
+    <path d="M 32 25 Q 40 30 48 25" stroke="#FFFFFF" stroke-width="2.5" fill="none"/>
+    <circle cx="40" cy="48" r="4" fill="#E92D72"/>
+    <circle cx="40" cy="62" r="4" fill="#06D6A0"/>
+  </g>
+
+  <!-- Cookie 3: Heart Cookie -->
+  <g transform="translate(520, 280)">
+    <path d="M 40 70 L 10 35 C 0 15 20 -5 40 15 C 60 -5 80 15 70 35 Z" fill="#F8C7DC" stroke="#111B3A" stroke-width="3"/>
+    <path d="M 40 60 L 18 32 C 10 18 24 5 40 20 C 56 5 70 18 62 32 Z" fill="#8338EC"/>
+  </g>
+
+  <!-- Piping Bag for Icing -->
+  <g transform="translate(480, 160) rotate(-30)">
+    <path d="M 0 0 L 100 -40 L 100 40 Z" fill="#E92D72" stroke="#111B3A" stroke-width="3"/>
+    <circle cx="100" cy="0" r="40" fill="#F8C7DC" stroke="#111B3A" stroke-width="3"/>
+  </g>
+
+  <!-- Title Badge -->
+  <rect x="180" y="490" width="440" height="50" rx="25" fill="#111B3A"/>
+  <text x="400" y="523" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">KIDS' COOKIE DECORATING LAB</text>
+</svg>

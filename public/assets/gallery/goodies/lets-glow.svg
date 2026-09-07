@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGlow)"/>
+
+  <!-- BLACK GLOW BAGS WITH NEON TISSUE & RAINBOW STRIPES -->
+  <g transform="translate(100, 110)">
+    <!-- Neon tissue -->
+    <path d="M 20 -20 L 40 20 L 60 -30 L 80 20 Z" fill="#22C55E"/>
+    <path d="M 30 -10 L 50 30 L 70 -10 Z" fill="#EC4899"/>
+    <rect x="15" y="40" width="110" height="180" rx="12" fill="#090D16" stroke="#22C55E" stroke-width="3"/>
+    <rect x="25" y="100" width="90" height="70" fill="#1E1B4B" rx="8" stroke="#EC4899" stroke-width="2"/>
+    <text x="70" y="125" font-family="sans-serif" font-size="8" font-weight="bold" fill="#22C55E" text-anchor="middle">THANK YOU FOR MAKING</text>
+    <text x="70" y="140" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="900" fill="#F472B6" text-anchor="middle">MY PARTY GLOW</text>
+    <text x="70" y="155" font-family="sans-serif" font-size="8" fill="#EAB308" text-anchor="middle">Love, Israa</text>
+  </g>
+
+  <g transform="translate(320, 80)">
+    <path d="M 25 -30 L 55 30 L 85 -40 L 115 30 Z" fill="#EC4899"/>
+    <path d="M 40 -15 L 70 40 L 100 -20 Z" fill="#22C55E"/>
+    <rect x="15" y="50" width="130" height="210" rx="14" fill="#090D16" stroke="#F472B6" stroke-width="4"/>
+    <rect x="25" y="120" width="110" height="85" fill="#1E1B4B" rx="10" stroke="#22C55E" stroke-width="2"/>
+    <text x="80" y="148" font-family="sans-serif" font-size="9" font-weight="bold" fill="#22C55E" text-anchor="middle">THANK YOU FOR MAKING</text>
+    <text x="80" y="168" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="900" fill="#F472B6" text-anchor="middle">MY PARTY GLOW</text>
+    <text x="80" y="188" font-family="sans-serif" font-size="10" fill="#EAB308" text-anchor="middle">Love, Israa</text>
+  </g>
+
+  <g transform="translate(560, 110)">
+    <path d="M 20 -20 L 40 20 L 60 -30 L 80 20 Z" fill="#EAB308"/>
+    <rect x="15" y="40" width="110" height="180" rx="12" fill="#090D16" stroke="#EAB308" stroke-width="3"/>
+    <rect x="25" y="100" width="90" height="70" fill="#1E1B4B" rx="8" stroke="#38BDF8" stroke-width="2"/>
+    <text x="70" y="125" font-family="sans-serif" font-size="8" font-weight="bold" fill="#22C55E" text-anchor="middle">MY PARTY GLOW</text>
+  </g>
+
+  <!-- FRONT TABLE NEON ACCESSORIES -->
+  <!-- Coloring Books -->
+  <g transform="translate(220, 340)">
+    <rect x="0" y="0" width="160" height="170" rx="10" fill="#0F172A" stroke="#22C55E" stroke-width="3"/>
+    <rect x="10" y="15" width="140" height="35" fill="#1E1B4B" rx="6" stroke="#F472B6" stroke-width="2"/>
+    <text x="80" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="900" fill="#22C55E" text-anchor="middle">MY COLORING BOOK</text>
+    <text x="80" y="90" font-family="sans-serif" font-size="10" font-weight="bold" fill="#F472B6" text-anchor="middle">COLOR • CREATE • HAVE FUN!</text>
+    <text x="80" y="140" font-family="sans-serif" font-size="10" fill="#EAB308" text-anchor="middle">Love, ISRAA</text>
+  </g>
+  <g transform="translate(420, 340)">
+    <rect x="0" y="0" width="160" height="170" rx="10" fill="#0F172A" stroke="#22C55E" stroke-width="3"/>
+    <rect x="10" y="15" width="140" height="35" fill="#1E1B4B" rx="6" stroke="#F472B6" stroke-width="2"/>
+    <text x="80" y="38" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="900" fill="#22C55E" text-anchor="middle">MY COLORING BOOK</text>
+    <text x="80" y="90" font-family="sans-serif" font-size="10" font-weight="bold" fill="#F472B6" text-anchor="middle">COLOR • CREATE • HAVE FUN!</text>
+    <text x="80" y="140" font-family="sans-serif" font-size="10" fill="#EAB308" text-anchor="middle">Love, ISRAA</text>
+  </g>
+
+  <!-- Title Badge -->
+  <rect x="140" y="525" width="520" height="50" rx="25" fill="#1E1B4B" stroke="#22C55E" stroke-width="2"/>
+  <text x="400" y="557" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="18" fill="#22C55E" text-anchor="middle" letter-spacing="2">LET'S GLOW PARTY GOODIE BAGS</text>
+</svg>

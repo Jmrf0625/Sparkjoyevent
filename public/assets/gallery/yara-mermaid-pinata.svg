@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="oceanBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0F2FE"/>
+      <stop offset="100%" stop-color="#BAE6FD"/>
+    </linearGradient>
+    <radialGradient id="piñataGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#7E22CE"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#oceanBg)"/>
+
+  <!-- Hanging rope -->
+  <line x1="400" y1="0" x2="400" y2="120" stroke="#78350F" stroke-width="6"/>
+
+  <!-- Round Fringed Mermaid Piñata Body (Purple & Teal Fringe) -->
+  <circle cx="400" cy="280" r="160" fill="url(#piñataGrad)" stroke="#581C87" stroke-width="6"/>
+
+  <!-- Layered Paper Fringes -->
+  <path d="M 250 280 Q 400 320 550 280" stroke="#38BDF8" stroke-width="12" fill="none" stroke-dasharray="10 6"/>
+  <path d="M 270 320 Q 400 360 530 320" stroke="#F472B6" stroke-width="12" fill="none" stroke-dasharray="10 6"/>
+  <path d="M 300 360 Q 400 400 500 360" stroke="#FBBF24" stroke-width="12" fill="none" stroke-dasharray="10 6"/>
+
+  <!-- Mermaid Illustration Art in Center -->
+  <circle cx="400" cy="240" r="85" fill="#FFFFFF" stroke="#38BDF8" stroke-width="4"/>
+  <!-- Mermaid Red Hair -->
+  <path d="M 340 210 Q 400 160 460 210 Q 480 260 440 280 Q 400 290 360 280 Z" fill="#EF4444"/>
+  <!-- Winking Face -->
+  <circle cx="380" cy="230" r="5" fill="#111827"/>
+  <!-- Winking eye right -->
+  <path d="M 410 230 Q 420 220 430 230" stroke="#111827" stroke-width="3" fill="none"/>
+  <!-- Smile -->
+  <path d="M 390 250 Q 400 260 410 250" stroke="#111827" stroke-width="3" fill="none"/>
+  <!-- Shells in hair -->
+  <circle cx="355" cy="205" r="8" fill="#F472B6"/>
+
+  <!-- Name Banner "YARA" -->
+  <rect x="280" y="420" width="240" height="50" rx="25" fill="#0284C7" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="400" y="453" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="24" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">YARA</text>
+
+  <!-- Title Badge -->
+  <rect x="150" y="520" width="500" height="50" rx="25" fill="#0F172A"/>
+  <text x="400" y="552" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">MERMAID YARA CUSTOM PIÑATA</text>
+</svg>

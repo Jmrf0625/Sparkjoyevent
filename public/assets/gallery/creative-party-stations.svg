@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgPastel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5F5"/>
+      <stop offset="50%" stop-color="#FFF8E7"/>
+      <stop offset="100%" stop-color="#EFF6FF"/>
+    </linearGradient>
+
+    <linearGradient id="pinkHeaderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF4D8D"/>
+      <stop offset="100%" stop-color="#FF2E73"/>
+    </linearGradient>
+
+    <linearGradient id="blueCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E0F2FE"/>
+      <stop offset="100%" stop-color="#BAE6FD"/>
+    </linearGradient>
+
+    <linearGradient id="pinkCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE4E6"/>
+      <stop offset="100%" stop-color="#FECDD3"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background Surface -->
+  <rect width="1000" height="680" rx="16" fill="url(#bgPastel)"/>
+  <!-- Dashed Border -->
+  <rect x="12" y="12" width="976" height="656" rx="12" fill="none" stroke="#F472B6" stroke-width="3" stroke-dasharray="8 6"/>
+
+  <!-- Top Title Banner -->
+  <g font-family="'Comic Sans MS', 'Fredoka', cursive, sans-serif" font-weight="900" text-anchor="middle">
+    <!-- Heart & Star Decorations -->
+    <path d="M 50,45 C 50,35 60,30 70,40 C 80,30 90,35 90,45 C 90,60 70,70 70,75 C 70,70 50,60 50,45 Z" fill="#FF2E73"/>
+    <polygon points="940,40 944,52 956,52 947,60 950,72 940,64 930,72 933,60 924,52 936,52" fill="#F59E0B"/>
+    <circle cx="110" cy="85" r="6" fill="#A3E635"/>
+    <circle cx="910" cy="90" r="5" fill="#3B82F6"/>
+
+    <!-- TWO CREATIVE ACTIVITIES Header -->
+    <text x="500" y="80" font-size="46" letter-spacing="1">
+      <tspan fill="#FF2E73">TWO </tspan>
+      <tspan fill="#F59E0B">CREATIVE </tspan>
+      <tspan fill="#A855F7">ACTIVITIES</tspan>
+    </text>
+  </g>
+
+  <!-- ================= LEFT PANEL: MY OWN TOY FACTORY (PINK) ================= -->
+  <g transform="translate(35, 110)" filter="url(#softShadow)">
+    <rect width="445" height="460" rx="18" fill="#FFF1F2" stroke="#FDA4AF" stroke-width="3"/>
+    
+    <!-- Title Badge -->
+    <rect x="20" y="15" width="405" height="48" rx="24" fill="#FFE4E6" stroke="#FB7185" stroke-width="2"/>
+    <text x="222" y="48" font-family="'Comic Sans MS', cursive" font-weight="900" font-size="24" fill="#E11D48" text-anchor="middle" letter-spacing="1">
+      🧸 MY OWN TOY FACTORY
+    </text>
+
+    <!-- 4 Activity Photo Grid Blocks -->
+    <!-- Photo 1: DIY Felt Plush Kit Prep -->
+    <rect x="25" y="75" width="190" height="135" rx="10" fill="#FFFFFF" stroke="#FECDD3" stroke-width="1.5"/>
+    <circle cx="42" cy="92" r="12" fill="#E11D48"/>
+    <text x="42" y="97" font-weight="bold" font-size="13" fill="#FFF" text-anchor="middle">1</text>
+    <!-- Felt shapes -->
+    <rect x="65" y="95" width="28" height="35" rx="6" fill="#D97706"/>
+    <rect x="100" y="95" width="28" height="35" rx="6" fill="#F472B6"/>
+    <rect x="135" y="95" width="28" height="35" rx="6" fill="#10B981"/>
+    <circle cx="80" cy="155" r="10" fill="#2563EB"/>
+    <circle cx="110" cy="155" r="10" fill="#EC4899"/>
+    <circle cx="140" cy="155" r="10" fill="#8B5CF6"/>
+
+    <!-- Photo 2: Hands Stitching Pink Bunny -->
+    <rect x="230" y="75" width="190" height="135" rx="10" fill="#FFFFFF" stroke="#FECDD3" stroke-width="1.5"/>
+    <circle cx="247" cy="92" r="12" fill="#E11D48"/>
+    <text x="247" y="97" font-weight="bold" font-size="13" fill="#FFF" text-anchor="middle">2</text>
+    <!-- Pink Bunny Being Stitched -->
+    <path d="M 315,115 C 290,90 280,120 300,140 C 300,170 350,170 350,140 C 370,120 360,90 335,115 Z" fill="#F472B6"/>
+    <!-- Thread line -->
+    <path d="M 310,135 Q 325,120 340,135" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-dasharray="4 3"/>
+
+    <!-- Photo 3: Stuffing Plushie -->
+    <rect x="25" y="220" width="190" height="135" rx="10" fill="#FFFFFF" stroke="#FECDD3" stroke-width="1.5"/>
+    <circle cx="42" cy="237" r="12" fill="#E11D48"/>
+    <text x="42" y="242" font-weight="bold" font-size="13" fill="#FFF" text-anchor="middle">3</text>
+    <!-- Bunny being stuffed with cotton -->
+    <path d="M 110,260 C 90,240 80,270 100,290 C 100,320 150,320 150,290 C 170,270 160,240 135,260 Z" fill="#F472B6"/>
+    <circle cx="115" cy="305" r="12" fill="#FFFFFF"/>
+
+    <!-- Photo 4: Completed Soft Friends -->
+    <rect x="230" y="220" width="190" height="135" rx="10" fill="#FFFFFF" stroke="#FECDD3" stroke-width="1.5"/>
+    <circle cx="247" cy="237" r="12" fill="#E11D48"/>
+    <text x="247" y="242" font-weight="bold" font-size="13" fill="#FFF" text-anchor="middle">4</text>
+    <!-- Teddy, Bunny, Cat, Dino felt plushies -->
+    <circle cx="275" cy="285" r="16" fill="#D97706"/>
+    <circle cx="315" cy="285" r="16" fill="#F472B6"/>
+    <circle cx="355" cy="285" r="16" fill="#10B981"/>
+    <circle cx="390" cy="285" r="16" fill="#8B5CF6"/>
+
+    <!-- Bottom Description Text -->
+    <text x="222" y="380" font-family="sans-serif" font-size="12" fill="#9F1239" text-anchor="middle" font-weight="bold">
+      Children will choose, stitch, stuff and decorate their own plush
+    </text>
+    <text x="222" y="398" font-family="sans-serif" font-size="12" fill="#9F1239" text-anchor="middle" font-weight="bold">
+      toy, creating a soft little friend that is completely unique!
+    </text>
+
+    <!-- Branding Footer -->
+    <text x="222" y="435" font-family="'Comic Sans MS', cursive" font-weight="900" font-size="14" fill="#BE123C" text-anchor="middle" letter-spacing="1">
+      SPARK JOY EVENT MANAGEMENT
+    </text>
+  </g>
+
+  <!-- ================= RIGHT PANEL: MAGICAL MASK MAKERS WORKSHOP (BLUE) ================= -->
+  <g transform="translate(520, 110)" filter="url(#softShadow)">
+    <rect width="445" height="460" rx="18" fill="#F0F9FF" stroke="#7DD3FC" stroke-width="3"/>
+
+    <!-- Title Badge -->
+    <rect x="20" y="15" width="405" height="48" rx="24" fill="#E0F2FE" stroke="#38BDF8" stroke-width="2"/>
+    <text x="222" y="48" font-family="'Comic Sans MS', cursive" font-weight="900" font-size="22" fill="#0284C7" text-anchor="middle" letter-spacing="1">
+      ✨ MAGICAL MASK MAKERS
+    </text>
+
+    <!-- 4 Activity Photo Grid Blocks -->
+    <!-- Photo 1: Blank Mask Base Supplies -->
+    <rect x="25" y="75" width="190" height="135" rx="10" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.5"/>
+    <circle cx="42" cy="92" r="12" fill="#0284C7"/>
+    <text x="42" y="97" font-weight="bold" font-size="13" fill="#FFF" text-anchor="middle">1</text>
+    <!-- Blank Masks -->
+    <path d="M 70,135 Q 120,110 170,135 Q 150,170 120,165 Q 90,170 70,135 Z" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="2"/>
+    <circle cx="100" cy="142" r="8" fill="#38BDF8"/>
+    <circle cx="140" cy="142" r="8" fill="#38BDF8"/>
+
+    <!-- Photo 2: Coloring & Decorating Unicorn Mask -->
+    <rect x="230" y="75" width="190" height="135" rx="10" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.5"/>
+    <circle cx="247" cy="92" r="12" fill="#0284C7"/>
+    <text x="247" y="97" font-weight="bold" font-size="13" fill="#FFF" text-anchor="middle">2</text>
+    <!-- Mask with Horn -->
+    <path d="M 280,135 Q 325,110 370,135 Q 350,170 325,165 Q 300,170 280,135 Z" fill="#FFFFFF" stroke="#EC4899" stroke-width="2"/>
+    <polygon points="325,115 320,80 330,80" fill="#F59E0B"/>
+
+    <!-- Photo 3: Flower & Glitter Trim -->
+    <rect x="25" y="220" width="190" height="135" rx="10" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.5"/>
+    <circle cx="42" cy="237" r="12" fill="#0284C7"/>
+    <text x="42" y="242" font-weight="bold" font-size="13" fill="#FFF" text-anchor="middle">3</text>
+    <path d="M 70,280 Q 120,255 170,280 Q 150,315 120,310 Q 90,315 70,280 Z" fill="#FFFFFF" stroke="#A855F7" stroke-width="2"/>
+    <!-- Flowers on top -->
+    <circle cx="100" cy="265" r="7" fill="#F472B6"/>
+    <circle cx="120" cy="260" r="7" fill="#38BDF8"/>
+    <circle cx="140" cy="265" r="7" fill="#F59E0B"/>
+
+    <!-- Photo 4: Children Holding Completed Character Masks -->
+    <rect x="230" y="220" width="190" height="135" rx="10" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.5"/>
+    <circle cx="247" cy="237" r="12" fill="#0284C7"/>
+    <text x="247" y="242" font-weight="bold" font-size="13" fill="#FFF" text-anchor="middle">4</text>
+    <!-- Character Masks: Butterfly, Stitch, Lion, Wonder Woman -->
+    <circle cx="270" cy="285" r="14" fill="#EC4899"/>
+    <circle cx="310" cy="285" r="14" fill="#2563EB"/>
+    <circle cx="350" cy="285" r="14" fill="#F59E0B"/>
+    <circle cx="390" cy="285" r="14" fill="#10B981"/>
+
+    <!-- Bottom Description Text -->
+    <text x="222" y="380" font-family="sans-serif" font-size="12" fill="#0369A1" text-anchor="middle" font-weight="bold">
+      Children will choose, colour and decorate their own mask, transforming
+    </text>
+    <text x="222" y="398" font-family="sans-serif" font-size="12" fill="#0369A1" text-anchor="middle" font-weight="bold">
+      it into a magical character ready for imaginative play!
+    </text>
+
+    <!-- Branding Footer -->
+    <text x="222" y="435" font-family="'Comic Sans MS', cursive" font-weight="900" font-size="14" fill="#0284C7" text-anchor="middle" letter-spacing="1">
+      ★ SPARK JOY EVENT MANAGEMENT ★
+    </text>
+  </g>
+
+  <!-- ================= BOTTOM PRICE BANNER ================= -->
+  <g transform="translate(500, 615)" filter="url(#softShadow)">
+    <rect x="-180" y="-30" width="360" height="60" rx="30" fill="url(#pinkHeaderGrad)"/>
+    <text x="0" y="0" font-family="'Comic Sans MS', cursive" font-weight="900" font-size="28" fill="#FFFFFF" text-anchor="middle">
+      135 QAR <tspan font-size="16" font-weight="bold">PER CHILD</tspan>
+    </text>
+    <text x="0" y="18" font-family="sans-serif" font-weight="bold" font-size="11" fill="#FEF08A" text-anchor="middle" letter-spacing="1">
+      1-HOUR WORKSHOP
+    </text>
+  </g>
+
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="frozenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E0F7FA" />
+      <stop offset="100%" stop-color="#80DEEA" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#frozenGrad)"/>
+
+  <!-- Snowflakes -->
+  <g stroke="#FFFFFF" stroke-width="4" stroke-linecap="round">
+    <!-- Snowflake 1 -->
+    <g transform="translate(200, 150)">
+      <line x1="-30" y1="0" x2="30" y2="0"/>
+      <line x1="0" y1="-30" x2="0" y2="30"/>
+      <line x1="-20" y1="-20" x2="20" y2="20"/>
+      <line x1="-20" y1="20" x2="20" y2="-20"/>
+    </g>
+    <!-- Snowflake 2 -->
+    <g transform="translate(600, 180)">
+      <line x1="-40" y1="0" x2="40" y2="0"/>
+      <line x1="0" y1="-40" x2="0" y2="40"/>
+      <line x1="-28" y1="-28" x2="28" y2="28"/>
+      <line x1="-28" y1="28" x2="28" y2="-28"/>
+    </g>
+  </g>
+
+  <!-- Winter Ice Castle Silhouette -->
+  <path d="M 250 480 L 280 320 L 320 360 L 400 200 L 480 360 L 520 320 L 550 480 Z" fill="#FFFFFF" opacity="0.9" stroke="#118AB2" stroke-width="3"/>
+
+  <!-- Title Badge -->
+  <rect x="180" y="490" width="440" height="50" rx="25" fill="#111B3A"/>
+  <text x="400" y="523" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">FROZEN WINTER WONDERLAND</text>
+</svg>

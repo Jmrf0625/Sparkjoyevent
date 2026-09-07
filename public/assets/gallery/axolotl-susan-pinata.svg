@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="axBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5F7"/>
+      <stop offset="100%" stop-color="#FED7E2"/>
+    </linearGradient>
+    <linearGradient id="peachFringe" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FBD38D"/>
+      <stop offset="100%" stop-color="#F6AD55"/>
+    </linearGradient>
+    <linearGradient id="purpleGill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9F7AEA"/>
+      <stop offset="100%" stop-color="#6B46C1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#axBg)"/>
+
+  <!-- Hanging Loop -->
+  <path d="M 400 90 Q 400 50 410 40 Q 420 50 400 90" fill="none" stroke="#ED64A6" stroke-width="6"/>
+
+  <!-- Axolotl Gills Left -->
+  <g fill="url(#purpleGill)" stroke="#553C9A" stroke-width="3">
+    <path d="M 230 180 C 160 140 150 200 230 220 Z"/>
+    <path d="M 220 230 C 140 210 130 280 220 285 Z"/>
+    <path d="M 230 300 C 150 310 160 370 230 340 Z"/>
+  </g>
+
+  <!-- Axolotl Gills Right -->
+  <g fill="url(#purpleGill)" stroke="#553C9A" stroke-width="3">
+    <path d="M 570 180 C 640 140 650 200 570 220 Z"/>
+    <path d="M 580 230 C 660 210 670 280 580 285 Z"/>
+    <path d="M 570 300 C 650 310 640 370 570 340 Z"/>
+  </g>
+
+  <!-- Main Body (Peach Fringed Round Squishmallow Shape) -->
+  <ellipse cx="400" cy="320" rx="180" ry="200" fill="url(#peachFringe)" stroke="#DD6B20" stroke-width="4"/>
+
+  <!-- Fringe texture detail lines -->
+  <path d="M 250 200 Q 400 220 550 200 M 240 250 Q 400 270 560 250 M 230 300 Q 400 320 570 300 M 240 350 Q 400 370 560 350" stroke="#E2E8F0" stroke-width="2" stroke-dasharray="8 6" opacity="0.6"/>
+
+  <!-- Eyes & Mouth -->
+  <circle cx="330" cy="240" r="18" fill="#1A202C"/>
+  <circle cx="470" cy="240" r="18" fill="#1A202C"/>
+  <!-- Eyes Sparkle -->
+  <circle cx="325" cy="235" r="5" fill="#FFFFFF"/>
+  <circle cx="465" cy="235" r="5" fill="#FFFFFF"/>
+
+  <!-- Cute Mouth -->
+  <path d="M 380 265 Q 390 275 400 265 Q 410 275 420 265" fill="none" stroke="#1A202C" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- White Glitter Tummy Oval -->
+  <ellipse cx="400" cy="380" rx="130" ry="100" fill="#FFFFFF" stroke="#FBB6CE" stroke-width="6"/>
+
+  <!-- "SUSAN" Name Letters -->
+  <text x="320" y="380" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="32" fill="#38A169">S</text>
+  <text x="350" y="380" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="32" fill="#DD6B20">U</text>
+  <text x="380" y="380" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="32" fill="#3182CE">S</text>
+  <text x="415" y="380" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="32" fill="#D69E2E">A</text>
+  <text x="450" y="380" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="32" fill="#805AD5">N</text>
+
+  <!-- Number 8 -->
+  <text x="400" y="440" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="42" fill="#D53F8C" text-anchor="middle">8</text>
+
+  <!-- Side Arms -->
+  <path d="M 220 310 Q 180 320 220 350 Z" fill="url(#peachFringe)" stroke="#DD6B20" stroke-width="3"/>
+  <path d="M 580 310 Q 620 320 580 350 Z" fill="url(#peachFringe)" stroke="#DD6B20" stroke-width="3"/>
+
+  <!-- Title Badge -->
+  <rect x="150" y="520" width="500" height="50" rx="25" fill="#C53030"/>
+  <text x="400" y="552" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">AXOLOTL SQUISHMALLOW PIÑATA (SUSAN 8)</text>
+</svg>

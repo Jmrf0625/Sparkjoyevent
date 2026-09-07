@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 950" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient: Clean wall and pink surface -->
+    <linearGradient id="bgWall" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="75%" stop-color="#F1F5F9"/>
+      <stop offset="75%" stop-color="#FCE7F3"/>
+      <stop offset="100%" stop-color="#FBCFE8"/>
+    </linearGradient>
+
+    <!-- Ruffle shadow filter -->
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+
+    <filter id="stickShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#831843" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Pink Glitter Pattern for Stick Handle -->
+    <pattern id="glitterPattern" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#9D174D"/>
+      <circle cx="2" cy="2" r="1" fill="#F472B6"/>
+      <circle cx="7" cy="3" r="1.2" fill="#FCE7F3"/>
+      <circle cx="4" cy="7" r="1" fill="#F43F5E"/>
+      <circle cx="8" cy="8" r="0.8" fill="#FFFFFF"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="950" fill="url(#bgWall)"/>
+
+  <!-- Main Piñata Container -->
+  <g filter="url(#softShadow)" transform="translate(400, 420)">
+    
+    <!-- Outer Layer 1: Sky Blue Ruffled Layer (80 scalloped petals) -->
+    <g fill="#38BDF8" stroke="#0284C7" stroke-width="0.5">
+      <!-- Outer Ruffle Petals -->
+      <path d="M 0,-340 A 340,340 0 1,1 -0.1,-340" fill="none"/>
+      <!-- Scalloped Layer Outer -->
+      <circle cx="0" cy="0" r="335" fill="#38BDF8"/>
+      <!-- Scalloped Edge details -->
+      <g fill="#7DD3FC">
+        <circle cx="0" cy="-335" r="18"/><circle cx="52" cy="-330" r="18"/><circle cx="103" cy="-318" r="18"/><circle cx="152" cy="-298" r="18"/><circle cx="196" cy="-271" r="18"/><circle cx="236" cy="-236" r="18"/><circle cx="271" cy="-196" r="18"/><circle cx="298" cy="-152" r="18"/><circle cx="318" cy="-103" r="18"/><circle cx="330" cy="-52" r="18"/><circle cx="335" cy="0" r="18"/><circle cx="330" cy="52" r="18"/><circle cx="318" cy="103" r="18"/><circle cx="298" cy="152" r="18"/><circle cx="271" cy="196" r="18"/><circle cx="236" cy="236" r="18"/><circle cx="196" cy="271" r="18"/><circle cx="152" cy="298" r="18"/><circle cx="103" cy="318" r="18"/><circle cx="52" cy="330" r="18"/><circle cx="0" cy="335" r="18"/><circle cx="-52" cy="330" r="18"/><circle cx="-103" cy="318" r="18"/><circle cx="-152" cy="298" r="18"/><circle cx="-196" cy="271" r="18"/><circle cx="-236" cy="236" r="18"/><circle cx="-271" cy="196" r="18"/><circle cx="-298" cy="152" r="18"/><circle cx="-318" cy="103" r="18"/><circle cx="-330" cy="52" r="18"/><circle cx="-335" cy="0" r="18"/><circle cx="-330" cy="-52" r="18"/><circle cx="-318" cy="-103" r="18"/><circle cx="-298" cy="-152" r="18"/><circle cx="-271" cy="-196" r="18"/><circle cx="-236" cy="-236" r="18"/><circle cx="-196" cy="-271" r="18"/><circle cx="-152" cy="-298" r="18"/><circle cx="-103" cy="-318" r="18"/><circle cx="-52" cy="-330" r="18"/>
+      </g>
+    </g>
+
+    <!-- Layer 2: Lavender / Pastel Purple Ruffled Layer -->
+    <g fill="#E0E7FF">
+      <circle cx="0" cy="0" r="290"/>
+      <g fill="#DDD6FE">
+        <circle cx="0" cy="-290" r="16"/><circle cx="45" cy="-286" r="16"/><circle cx="89" cy="-276" r="16"/><circle cx="131" cy="-258" r="16"/><circle cx="170" cy="-235" r="16"/><circle cx="205" cy="-205" r="16"/><circle cx="235" cy="-170" r="16"/><circle cx="258" cy="-131" r="16"/><circle cx="276" cy="-89" r="16"/><circle cx="286" cy="-45" r="16"/><circle cx="290" cy="0" r="16"/><circle cx="286" cy="45" r="16"/><circle cx="276" cy="89" r="16"/><circle cx="258" cy="131" r="16"/><circle cx="235" cy="170" r="16"/><circle cx="205" cy="205" r="16"/><circle cx="170" cy="235" r="16"/><circle cx="131" cy="258" r="16"/><circle cx="89" cy="276" r="16"/><circle cx="45" cy="286" r="16"/><circle cx="0" cy="290" r="16"/><circle cx="-45" cy="286" r="16"/><circle cx="-89" cy="276" r="16"/><circle cx="-131" cy="258" r="16"/><circle cx="-170" cy="235" r="16"/><circle cx="-205" cy="205" r="16"/><circle cx="-235" cy="170" r="16"/><circle cx="-258" cy="131" r="16"/><circle cx="-276" cy="89" r="16"/><circle cx="-286" cy="45" r="16"/><circle cx="-290" cy="0" r="16"/><circle cx="-286" cy="-45" r="16"/><circle cx="-276" cy="-89" r="16"/><circle cx="-258" cy="-131" r="16"/><circle cx="-235" cy="-170" r="16"/><circle cx="-205" cy="-205" r="16"/><circle cx="-170" cy="-235" r="16"/><circle cx="-131" cy="-258" r="16"/><circle cx="-89" cy="-276" r="16"/><circle cx="-45" cy="-286" r="16"/>
+      </g>
+    </g>
+
+    <!-- Layer 3: Soft Pink Ruffled Layer -->
+    <g fill="#FCE7F3">
+      <circle cx="0" cy="0" r="245"/>
+      <g fill="#FBCFE8">
+        <circle cx="0" cy="-245" r="14"/><circle cx="38" cy="-242" r="14"/><circle cx="75" cy="-233" r="14"/><circle cx="111" cy="-218" r="14"/><circle cx="144" cy="-198" r="14"/><circle cx="173" cy="-173" r="14"/><circle cx="198" cy="-144" r="14"/><circle cx="218" cy="-111" r="14"/><circle cx="233" cy="-75" r="14"/><circle cx="242" cy="-38" r="14"/><circle cx="245" cy="0" r="14"/><circle cx="242" cy="38" r="14"/><circle cx="233" cy="75" r="14"/><circle cx="218" cy="111" r="14"/><circle cx="198" cy="144" r="14"/><circle cx="173" cy="173" r="14"/><circle cx="144" cy="198" r="14"/><circle cx="111" cy="218" r="14"/><circle cx="75" cy="233" r="14"/><circle cx="38" cy="242" r="14"/><circle cx="0" cy="245" r="14"/><circle cx="-38" cy="242" r="14"/><circle cx="-75" cy="233" r="14"/><circle cx="-111" cy="218" r="14"/><circle cx="-144" cy="198" r="14"/><circle cx="-173" cy="173" r="14"/><circle cx="-198" cy="144" r="14"/><circle cx="-218" cy="111" r="14"/><circle cx="-233" cy="75" r="14"/><circle cx="-242" cy="38" r="14"/><circle cx="-245" cy="0" r="14"/><circle cx="-242" cy="-38" r="14"/><circle cx="-233" cy="-75" r="14"/><circle cx="-218" cy="-111" r="14"/><circle cx="-198" cy="-144" r="14"/><circle cx="-173" cy="-173" r="14"/><circle cx="-144" cy="-198" r="14"/><circle cx="-111" cy="-218" r="14"/><circle cx="-75" cy="-233" r="14"/><circle cx="-38" cy="-242" r="14"/>
+      </g>
+    </g>
+
+    <!-- Inner Disc Base (White Scalloped Edge) -->
+    <circle cx="0" cy="0" r="205" fill="#FFFFFF" stroke="#F472B6" stroke-width="2"/>
+    <circle cx="0" cy="0" r="200" fill="none" stroke="#F472B6" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+    <!-- ==================== STITCH & ANGEL ARTWORK ==================== -->
+    <g transform="translate(0, 10)">
+      
+      <!-- STITCH (Blue Alien Bottom) -->
+      <!-- Ears -->
+      <!-- Left Ear (Large notched blue ear) -->
+      <path d="M -45,-35 C -110,-95 -130,-50 -85,-10 C -70,5 -55,-10 -45,-35 Z" fill="#2563EB" stroke="#1D4ED8" stroke-width="2"/>
+      <path d="M -48,-32 C -100,-85 -118,-48 -82,-12 C -70,0 -56,-12 -48,-32 Z" fill="#EC4899"/>
+
+      <!-- Right Ear -->
+      <path d="M 45,-35 C 110,-95 130,-50 85,-10 C 70,5 55,-10 45,-35 Z" fill="#2563EB" stroke="#1D4ED8" stroke-width="2"/>
+      <path d="M 48,-32 C 100,-85 118,-48 82,-12 C 70,0 56,-12 48,-32 Z" fill="#EC4899"/>
+
+      <!-- Head -->
+      <ellipse cx="0" cy="0" rx="65" ry="50" fill="#3B82F6"/>
+      <path d="M -45,10 C -25,-15 25,-15 45,10 C 30,35 -30,35 -45,10 Z" fill="#60A5FA"/>
+
+      <!-- Eyes -->
+      <ellipse cx="-28" cy="-8" rx="16" ry="20" fill="#0F172A"/>
+      <ellipse cx="28" cy="-8" rx="16" ry="20" fill="#0F172A"/>
+      <!-- Eye Catchlights -->
+      <circle cx="-24" cy="-12" r="5" fill="#FFFFFF"/>
+      <circle cx="-30" cy="-4" r="2" fill="#FFFFFF"/>
+      <circle cx="32" cy="-12" r="5" fill="#FFFFFF"/>
+      <circle cx="26" cy="-4" r="2" fill="#FFFFFF"/>
+
+      <!-- Nose -->
+      <path d="M -12,-8 C -5,-15 5,-15 12,-8 C 8,-2 -8,-2 -12,-8 Z" fill="#1E3A8A"/>
+
+      <!-- Big Happy Smile -->
+      <path d="M -38,12 Q 0,40 38,12 C 28,32 -28,32 -38,12 Z" fill="#1E1B4B"/>
+      <path d="M -15,22 Q 0,32 15,22 C 10,28 -10,28 -15,22 Z" fill="#F43F5E"/>
+
+      <!-- Body & Paws -->
+      <path d="M -45,35 Q -65,110 0,110 Q 65,110 45,35 Z" fill="#3B82F6"/>
+      <path d="M -25,40 Q 0,25 25,40 Q 20,95 0,95 Q -20,95 -25,40 Z" fill="#93C5FD"/>
+
+      <!-- Feet sitting forward -->
+      <ellipse cx="-52" cy="100" rx="22" ry="16" fill="#2563EB"/>
+      <ellipse cx="-52" cy="100" rx="14" ry="10" fill="#60A5FA"/>
+      <ellipse cx="52" cy="100" rx="22" ry="16" fill="#2563EB"/>
+      <ellipse cx="52" cy="100" rx="14" ry="10" fill="#60A5FA"/>
+
+
+      <!-- ANGEL (Pink Alien Sitting on Top) -->
+      <g transform="translate(0, -65)">
+        <!-- Antennae / Long Ears -->
+        <path d="M -30,-25 C -75,-75 -85,-35 -50,5 C -40,15 -32,-5 -30,-25 Z" fill="#EC4899"/>
+        <path d="M -32,-23 C -68,-65 -75,-33 -48,2 C -40,10 -33,-5 -32,-23 Z" fill="#FBCFE8"/>
+
+        <path d="M 30,-25 C 75,-75 85,-35 50,5 C 40,15 32,-5 30,-25 Z" fill="#EC4899"/>
+        <path d="M 32,-23 C 68,-65 75,-33 48,2 C 40,10 33,-5 32,-23 Z" fill="#FBCFE8"/>
+
+        <!-- Head -->
+        <ellipse cx="0" cy="0" rx="50" ry="38" fill="#F472B6"/>
+        <path d="M -32,8 C -18,-10 18,-10 32,8 C 20,26 -20,26 -32,8 Z" fill="#FBCFE8"/>
+
+        <!-- Eyes -->
+        <ellipse cx="-20" cy="-6" rx="12" ry="15" fill="#831843"/>
+        <ellipse cx="20" cy="-6" rx="12" ry="15" fill="#831843"/>
+        <!-- Eye Highlights -->
+        <circle cx="-17" cy="-9" r="4" fill="#FFFFFF"/>
+        <circle cx="23" cy="-9" r="4" fill="#FFFFFF"/>
+
+        <!-- Nose & Smile -->
+        <ellipse cx="0" cy="-4" rx="6" ry="4" fill="#9D174D"/>
+        <path d="M -18,10 Q 0,22 18,10" stroke="#831843" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+        <!-- Body -->
+        <path d="M -28,25 Q -40,65 0,65 Q 40,65 28,25 Z" fill="#F472B6"/>
+        <path d="M -15,28 Q 0,18 15,28 Q 12,58 0,58 Q -12,58 -15,28 Z" fill="#FCE7F3"/>
+      </g>
+    </g>
+
+    <!-- ==================== CONFETTI & STARS ==================== -->
+    <g fill="#F59E0B">
+      <polygon points="120,-110 123,-102 131,-102 125,-97 127,-89 120,-94 113,-89 115,-97 109,-102 117,-102"/>
+      <polygon points="-130,-80 -127,-72 -119,-72 -125,-67 -123,-59 -130,-64 -137,-59 -135,-67 -141,-72 -133,-72"/>
+      <polygon points="-90,120 -87,112 -79,112 -85,107 -83,99 -90,104 -97,99 -95,107 -101,112 -93,112"/>
+      <polygon points="110,100 113,92 121,92 115,87 117,79 110,84 103,79 105,87 99,92 107,92"/>
+    </g>
+
+    <!-- Red/Pink/Blue Confetti Dots & Squares -->
+    <circle cx="-140" cy="-30" r="5" fill="#EF4444"/>
+    <circle cx="145" cy="-20" r="6" fill="#3B82F6"/>
+    <rect x="-110" y="-130" width="8" height="8" fill="#10B981" transform="rotate(25 -110 -130)"/>
+    <rect x="100" y="-140" width="8" height="8" fill="#EC4899" transform="rotate(15 100 -140)"/>
+    <circle cx="150" cy="40" r="5" fill="#F59E0B"/>
+    <circle cx="-150" cy="30" r="5" fill="#8B5CF6"/>
+
+    <!-- ==================== TOP FLORAL CROWN ==================== -->
+    <!-- Beautiful pastel flowers arched along top of inner circle -->
+    <g transform="translate(0, -185)">
+      <!-- Flower 1 (Peach Left) -->
+      <g transform="translate(-130, 25)">
+        <circle cx="0" cy="0" r="14" fill="#FDBA74"/>
+        <circle cx="0" cy="-10" r="7" fill="#FFEDD5"/><circle cx="9" cy="-4" r="7" fill="#FFEDD5"/><circle cx="9" cy="6" r="7" fill="#FFEDD5"/><circle cx="0" cy="10" r="7" fill="#FFEDD5"/><circle cx="-9" cy="6" r="7" fill="#FFEDD5"/><circle cx="-9" cy="-4" r="7" fill="#FFEDD5"/>
+        <circle cx="0" cy="0" r="5" fill="#EA580C"/>
+      </g>
+      <!-- Flower 2 (Pink) -->
+      <g transform="translate(-85, 5)">
+        <circle cx="0" cy="0" r="12" fill="#F472B6"/>
+        <circle cx="0" cy="-8" r="6" fill="#FCE7F3"/><circle cx="7" cy="-3" r="6" fill="#FCE7F3"/><circle cx="7" cy="5" r="6" fill="#FCE7F3"/><circle cx="0" cy="8" r="6" fill="#FCE7F3"/><circle cx="-7" cy="5" r="6" fill="#FCE7F3"/><circle cx="-7" cy="-3" r="6" fill="#FCE7F3"/>
+        <circle cx="0" cy="0" r="4" fill="#9D174D"/>
+      </g>
+      <!-- Flower 3 (Mint) -->
+      <g transform="translate(-40, -8)">
+        <circle cx="0" cy="0" r="13" fill="#6EE7B7"/>
+        <circle cx="0" cy="-9" r="6" fill="#D1FAE5"/><circle cx="8" cy="-3" r="6" fill="#D1FAE5"/><circle cx="8" cy="5" r="6" fill="#D1FAE5"/><circle cx="0" cy="9" r="6" fill="#D1FAE5"/><circle cx="-8" cy="5" r="6" fill="#D1FAE5"/><circle cx="-8" cy="-3" r="6" fill="#D1FAE5"/>
+        <circle cx="0" cy="0" r="4" fill="#047857"/>
+      </g>
+      <!-- Flower 4 (Cream/Yellow Center) -->
+      <g transform="translate(10, -12)">
+        <circle cx="0" cy="0" r="15" fill="#FEF08A"/>
+        <circle cx="0" cy="-10" r="7" fill="#FFFFFF"/><circle cx="9" cy="-4" r="7" fill="#FFFFFF"/><circle cx="9" cy="6" r="7" fill="#FFFFFF"/><circle cx="0" cy="10" r="7" fill="#FFFFFF"/><circle cx="-9" cy="6" r="7" fill="#FFFFFF"/><circle cx="-9" cy="-4" r="7" fill="#FFFFFF"/>
+        <circle cx="0" cy="0" r="5" fill="#CA8A04"/>
+      </g>
+      <!-- Flower 5 (Rose Pink) -->
+      <g transform="translate(60, -5)">
+        <circle cx="0" cy="0" r="13" fill="#FB7185"/>
+        <circle cx="0" cy="-9" r="6" fill="#FFE4E6"/><circle cx="8" cy="-3" r="6" fill="#FFE4E6"/><circle cx="8" cy="5" r="6" fill="#FFE4E6"/><circle cx="0" cy="9" r="6" fill="#FFE4E6"/><circle cx="-8" cy="5" r="6" fill="#FFE4E6"/><circle cx="-8" cy="-3" r="6" fill="#FFE4E6"/>
+        <circle cx="0" cy="0" r="4" fill="#BE123C"/>
+      </g>
+      <!-- Flower 6 (Coral Right) -->
+      <g transform="translate(110, 15)">
+        <circle cx="0" cy="0" r="14" fill="#F87171"/>
+        <circle cx="0" cy="-9" r="6" fill="#FEE2E2"/><circle cx="8" cy="-3" r="6" fill="#FEE2E2"/><circle cx="8" cy="5" r="6" fill="#FEE2E2"/><circle cx="0" cy="9" r="6" fill="#FEE2E2"/><circle cx="-8" cy="5" r="6" fill="#FEE2E2"/><circle cx="-8" cy="-3" r="6" fill="#FEE2E2"/>
+        <circle cx="0" cy="0" r="4" fill="#991B1B"/>
+      </g>
+    </g>
+
+    <!-- Bottom Left Hibiscus Flower -->
+    <g transform="translate(-140, 140)">
+      <circle cx="0" cy="0" r="16" fill="#EC4899"/>
+      <path d="M 0,-15 C 8,-25 22,-15 15,0 C 22,15 8,25 0,15 C -8,25 -22,15 -15,0 C -22,-15 -8,-25 0,-15 Z" fill="#F472B6"/>
+      <circle cx="0" cy="0" r="6" fill="#FDE047"/>
+    </g>
+
+  </g> <!-- End Piñata Group -->
+
+  <!-- ==================== MATCHING PINK PIÑATA BUSTING STICK ==================== -->
+  <!-- Lies horizontally at the bottom, matching 55.jpeg -->
+  <g filter="url(#stickShadow)" transform="translate(400, 850)">
+    <!-- Main Stick (Tissue Wrapped Soft Pink) -->
+    <rect x="-370" y="-12" width="740" height="24" rx="12" fill="#FBCFE8" stroke="#F472B6" stroke-width="1.5"/>
+    <rect x="-370" y="-8" width="740" height="6" fill="#FCE7F3" opacity="0.6"/>
+    
+    <!-- Tissue Wrap Ruffle Detail lines on stick -->
+    <line x1="-320" y1="-12" x2="-320" y2="12" stroke="#F472B6" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="-250" y1="-12" x2="-250" y2="12" stroke="#F472B6" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="-180" y1="-12" x2="-180" y2="12" stroke="#F472B6" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="-110" y1="-12" x2="-110" y2="12" stroke="#F472B6" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="-40" y1="-12" x2="-40" y2="12" stroke="#F472B6" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="30" y1="-12" x2="30" y2="12" stroke="#F472B6" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="100" y1="-12" x2="100" y2="12" stroke="#F472B6" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <line x1="170" y1="-12" x2="170" y2="12" stroke="#F472B6" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+    <!-- Dark Pink Glitter Handle on Right End -->
+    <rect x="220" y="-13" width="150" height="26" rx="13" fill="url(#glitterPattern)" stroke="#831843" stroke-width="1"/>
+  </g>
+
+</svg>

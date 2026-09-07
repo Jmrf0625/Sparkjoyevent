@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 220" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8C7DC" />
+      <stop offset="100%" stop-color="#E92D72" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#E92D72" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Sparkles & Stars in Background -->
+  <path d="M 50 40 L 53 48 L 61 51 L 53 54 L 50 62 L 47 54 L 39 51 L 47 48 Z" fill="#FFD166" opacity="0.9"/>
+  <path d="M 440 30 L 442 36 L 448 38 L 442 40 L 440 46 L 438 40 L 432 38 L 438 36 Z" fill="#8338EC" opacity="0.8"/>
+  <path d="M 460 120 L 462 125 L 467 127 L 462 129 L 460 134 L 458 129 L 453 127 L 458 125 Z" fill="#06D6A0" opacity="0.8"/>
+  <path d="M 30 160 L 32 165 L 37 167 L 32 169 L 30 174 L 28 169 L 23 167 L 28 165 Z" fill="#FF9F1C" opacity="0.8"/>
+  <circle cx="90" cy="25" r="3" fill="#118AB2" />
+  <circle cx="410" cy="170" r="4" fill="#E92D72" />
+
+  <!-- Balloon Cluster -->
+  <g transform="translate(250, 60)" filter="url(#softShadow)">
+    <!-- Strings -->
+    <path d="M -15 -10 Q -5 20 0 45" stroke="#111B3A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 0 -20 Q 0 15 0 45" stroke="#111B3A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 15 -10 Q 5 20 0 45" stroke="#111B3A" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Left Balloon (Pattern: Dots) -->
+    <g transform="translate(-22, -32) rotate(-15)">
+      <ellipse cx="0" cy="0" rx="22" ry="26" fill="#F8C7DC" stroke="#111B3A" stroke-width="2.5"/>
+      <!-- Dots -->
+      <circle cx="-8" cy="-10" r="2" fill="#E92D72" opacity="0.7"/>
+      <circle cx="6" cy="-12" r="2" fill="#E92D72" opacity="0.7"/>
+      <circle cx="-12" cy="4" r="2" fill="#E92D72" opacity="0.7"/>
+      <circle cx="2" cy="2" r="2" fill="#E92D72" opacity="0.7"/>
+      <circle cx="-4" cy="14" r="2" fill="#E92D72" opacity="0.7"/>
+      <circle cx="10" cy="12" r="2" fill="#E92D72" opacity="0.7"/>
+      <!-- Highlight -->
+      <path d="M -14 -14 A 16 20 0 0 1 -4 -22" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+    </g>
+
+    <!-- Right Balloon (Pattern: Stripes) -->
+    <g transform="translate(22, -32) rotate(15)">
+      <ellipse cx="0" cy="0" rx="22" ry="26" fill="#E92D72" stroke="#111B3A" stroke-width="2.5"/>
+      <!-- Diagonal stripes -->
+      <path d="M -16 -12 L 16 12" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+      <path d="M -12 -20 L 20 4" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+      <path d="M -20 4 L 12 20" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+      <!-- Highlight -->
+      <path d="M -14 -14 A 16 20 0 0 1 -4 -22" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+    </g>
+
+    <!-- Center Top Balloon (Pattern: Solid Pink Gradient) -->
+    <g transform="translate(0, -48)">
+      <ellipse cx="0" cy="0" rx="24" ry="28" fill="url(#pinkGrad)" stroke="#111B3A" stroke-width="2.5"/>
+      <!-- Highlight -->
+      <path d="M -15 -15 A 18 22 0 0 1 -4 -24" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <!-- Bow Tie at knot -->
+    <g transform="translate(0, 45)">
+      <path d="M 0 0 L -12 -6 C -18 -9 -20 0 -12 6 Z" fill="#E92D72" stroke="#111B3A" stroke-width="2"/>
+      <path d="M 0 0 L 12 -6 C 18 -9 20 0 12 6 Z" fill="#E92D72" stroke="#111B3A" stroke-width="2"/>
+      <circle cx="0" cy="0" r="4" fill="#E92D72" stroke="#111B3A" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Typography: SPARK JOY -->
+  <text x="250" y="142" font-family="'Plus Jakarta Sans', 'Fredoka', 'Outfit', sans-serif" font-weight="900" font-size="34" fill="#111B3A" text-anchor="middle" letter-spacing="3.5">SPARK JOY</text>
+
+  <!-- Sub-typography: EVENT -->
+  <g transform="translate(250, 172)">
+    <line x1="-120" y1="-8" x2="-60" y2="-8" stroke="#E92D72" stroke-width="3" stroke-linecap="round"/>
+    <text x="0" y="0" font-family="'Plus Jakarta Sans', 'Fredoka', 'Outfit', sans-serif" font-weight="800" font-size="24" fill="#E92D72" text-anchor="middle" letter-spacing="6">EVENT</text>
+    <line x1="60" y1="-8" x2="120" y2="-8" stroke="#E92D72" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Sub-typography: MANAGEMENT -->
+  <text x="250" y="202" font-family="'Plus Jakarta Sans', 'Fredoka', 'Outfit', sans-serif" font-weight="700" font-size="15" fill="#111B3A" text-anchor="middle" letter-spacing="9">MANAGEMENT</text>
+</svg>

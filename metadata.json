@@ -1,0 +1,6 @@
+{
+  "name": "Spark Joy Event Management",
+  "description": "Spark Joy Event Management creates magical children's birthday parties, themed events, kids entertainment, creative activities and unforgettable celebrations in Qatar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

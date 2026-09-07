@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="footBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBF8FF"/>
+      <stop offset="100%" stop-color="#BEE3F8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#footBg)"/>
+
+  <!-- Football stadium confetti -->
+  <circle cx="120" cy="100" r="14" fill="#3182CE"/>
+  <circle cx="680" cy="110" r="16" fill="#D69E2E"/>
+  <circle cx="720" cy="450" r="12" fill="#3182CE"/>
+
+  <!-- Blue & Yellow Gift Bags (Ali's 3rd Birthday Football) -->
+  <g transform="translate(140, 150)">
+    <path d="M 30 50 Q 60 10 90 50" stroke="#1A365D" stroke-width="5" fill="none"/>
+    <rect x="10" y="50" width="100" height="210" rx="14" fill="#3182CE" stroke="#1A365D" stroke-width="4"/>
+    <!-- Yellow badge -->
+    <circle cx="60" cy="140" r="28" fill="#ECC94B"/>
+    <!-- Soccer ball pattern -->
+    <polygon points="60,126 68,132 65,142 55,142 52,132" fill="#1A365D"/>
+    <text x="60" y="190" font-family="sans-serif" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ALI'S 3RD</text>
+  </g>
+
+  <!-- Center Featured Bag -->
+  <g transform="translate(320, 110)">
+    <path d="M 40 60 Q 80 10 120 60" stroke="#1A365D" stroke-width="6" fill="none"/>
+    <rect x="10" y="60" width="140" height="260" rx="18" fill="#3182CE" stroke="#1A365D" stroke-width="4"/>
+    <!-- Big Yellow Circle badge -->
+    <circle cx="80" cy="160" r="40" fill="#ECC94B"/>
+    <!-- Soccer ball icon -->
+    <circle cx="80" cy="160" r="25" fill="#FFFFFF" stroke="#1A365D" stroke-width="2"/>
+    <polygon points="80,148 90,155 86,168 74,168 70,155" fill="#1A365D"/>
+    <text x="80" y="240" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">ALI'S 3RD BIRTHDAY</text>
+  </g>
+
+  <!-- Right Bag -->
+  <g transform="translate(540, 150)">
+    <path d="M 30 50 Q 60 10 90 50" stroke="#1A365D" stroke-width="5" fill="none"/>
+    <rect x="10" y="50" width="100" height="210" rx="14" fill="#3182CE" stroke="#1A365D" stroke-width="4"/>
+    <circle cx="60" cy="140" r="28" fill="#ECC94B"/>
+    <polygon points="60,126 68,132 65,142 55,142 52,132" fill="#1A365D"/>
+    <text x="60" y="190" font-family="sans-serif" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ALI'S 3RD</text>
+  </g>
+
+  <!-- Football Accessories: Coloring Books, Marshmallow Cones & Bubbles -->
+  <!-- Football Coloring Book -->
+  <g transform="translate(200, 380)">
+    <rect x="0" y="0" width="90" height="110" rx="8" fill="#FFFFFF" stroke="#1A365D" stroke-width="3"/>
+    <rect x="10" y="10" width="70" height="25" fill="#ECC94B" rx="4"/>
+    <text x="45" y="27" font-family="sans-serif" font-size="9" font-weight="bold" fill="#1A365D" text-anchor="middle">COLORING</text>
+    <circle cx="45" cy="70" r="18" fill="#3182CE"/>
+  </g>
+
+  <!-- Marshmallow Cone -->
+  <g transform="translate(500, 370)">
+    <polygon points="40,110 0,20 80,20" fill="#FFB6C1" stroke="#1A365D" stroke-width="2"/>
+    <!-- Marshmallows -->
+    <circle cx="20" cy="15" r="12" fill="#FFFFFF"/>
+    <circle cx="40" cy="10" r="14" fill="#ECC94B"/>
+    <circle cx="60" cy="15" r="12" fill="#69D2E7"/>
+  </g>
+
+  <!-- Title Badge -->
+  <rect x="150" y="510" width="500" height="50" rx="25" fill="#1A365D"/>
+  <text x="400" y="542" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">FOOTBALL CHAMPIONS BIRTHDAY SET</text>
+</svg>
