@@ -383,8 +383,24 @@ function initServiceQuoteButtons() {
       e.preventDefault();
       e.stopPropagation();
 
-      const serviceName = btn.getAttribute('data-service');
+      const serviceName = btn.getAttribute('data-service') || 'Event Services';
       const notesInput = document.getElementById('quoteNotes');
+
+      const waText = encodeURIComponent(`Hi Spark Joy Event Management! ✨ I would like to request a quote for: ${serviceName}`);
+      const whatsappUrl = `https://wa.me/97471716286?text=${waText}`;
+
+      // Trigger WhatsApp in new tab via dynamic anchor element
+      try {
+        const link = document.createElement('a');
+        link.href = whatsappUrl;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } catch (err) {
+        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      }
 
       if (serviceName) {
         // Pre-check matching service checkbox
@@ -404,8 +420,7 @@ function initServiceQuoteButtons() {
           noticeBox.classList.remove('hidden');
 
           if (instantWhatsappBtn) {
-            const quickMsg = encodeURIComponent(`Hello Spark Joy Event Management! ✨ I am asking for a quotation for ${serviceName} in Qatar.`);
-            instantWhatsappBtn.href = `https://wa.me/97471716286?text=${quickMsg}`;
+            instantWhatsappBtn.href = whatsappUrl;
           }
         }
       }
