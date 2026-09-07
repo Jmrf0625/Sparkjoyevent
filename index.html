@@ -539,7 +539,7 @@
           </a>
         </div>
 
-        <form id="quoteForm">
+        <form id="quoteForm" novalidate onsubmit="if(window.submitQuoteForm) { window.submitQuoteForm(event); return false; }">
           <div class="form-grid">
             <!-- Full Name -->
             <div class="form-group">
@@ -629,7 +629,7 @@
 
             <!-- Submit Button -->
             <div class="form-group full-width text-center" style="margin-top: 10px;">
-              <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 380px;">REQUEST A QUOTE</button>
+              <button type="submit" id="quoteSubmitBtn" class="btn btn-primary" style="width: 100%; max-width: 380px;">REQUEST A QUOTE</button>
             </div>
           </div>
         </form>

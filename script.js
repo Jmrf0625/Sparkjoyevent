@@ -245,19 +245,28 @@ function initQuotationForm() {
   const successCard = document.getElementById('quoteSuccessCard');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+  window.submitQuoteForm = function(e) {
+    if (e && e.preventDefault) e.preventDefault();
 
     const nameInput = document.getElementById('quoteName');
     const phoneInput = document.getElementById('quotePhone');
     const name = nameInput?.value.trim() || '';
     const phone = phoneInput?.value.trim() || '';
 
+    // Clear previous error styles
+    if (nameInput) nameInput.style.borderColor = '';
+    if (phoneInput) phoneInput.style.borderColor = '';
+
     if (!name || !phone) {
-      if (!name && nameInput) nameInput.focus();
-      else if (!phone && phoneInput) phoneInput.focus();
+      if (!name && nameInput) {
+        nameInput.style.borderColor = '#E92D72';
+        nameInput.focus();
+      } else if (!phone && phoneInput) {
+        phoneInput.style.borderColor = '#E92D72';
+        phoneInput.focus();
+      }
       showToast("Please enter your Name and Phone Number to request a quote. ✨");
-      return;
+      return false;
     }
 
     const email = document.getElementById('quoteEmail')?.value.trim() || '';
@@ -289,7 +298,7 @@ function initQuotationForm() {
     const whatsappUrl = `https://wa.me/97471716286?text=${encodedMessage}`;
 
     // Show Toast Confirmation
-    showToast("Opening WhatsApp with your customized quote details... ✨");
+    showToast("Quote Request Ready! Tap WhatsApp button to open chat... ✨");
 
     // Display In-Page Success Card
     if (successCard) {
@@ -332,12 +341,23 @@ function initQuotationForm() {
       }
     }
 
-    // Open WhatsApp synchronously
-    const win = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-    if (!win || win.closed || typeof win.closed === 'undefined') {
-      window.location.href = whatsappUrl;
+    // Direct trigger for WhatsApp via dynamic link to bypass popup blockers
+    try {
+      const link = document.createElement('a');
+      link.href = whatsappUrl;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (err) {
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
     }
-  });
+
+    return false;
+  };
+
+  form.addEventListener('submit', window.submitQuoteForm);
 }
 
 function escapeHtml(str) {
