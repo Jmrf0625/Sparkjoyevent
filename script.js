@@ -851,6 +851,25 @@ function initServiceSlideGallery() {
     document.body.style.overflow = 'hidden';
   }
 
+  // Attach globally to window for direct click handlers and Netlify deployment
+  window.openGallery = openGallery;
+  window.openModal = function(imageUrl, title) {
+    let key = 'pinatas';
+    if (title) {
+      const lower = title.toLowerCase();
+      if (lower.includes('workshop') || lower.includes('craft')) key = 'workshops';
+      else if (lower.includes('goodie') || lower.includes('favor') || lower.includes('bag')) key = 'goodies';
+      else if (lower.includes('school')) key = 'school';
+    }
+    openGallery(key, 0);
+    if (imageUrl && activeImg) {
+      activeImg.src = imageUrl;
+    }
+    if (title && titleEl) {
+      titleEl.textContent = title;
+    }
+  };
+
   function closeGallery() {
     modal.classList.remove('active');
     modal.setAttribute('aria-hidden', 'true');
