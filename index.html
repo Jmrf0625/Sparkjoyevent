@@ -13,6 +13,11 @@
   <meta property="og:image" content="assets/logo/spark-joy-logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <!-- Arabic Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -29,15 +34,20 @@
 
       <!-- Desktop Navigation -->
       <nav class="nav-links">
-        <a href="#home" class="nav-link active">HOME</a>
-        <a href="#about" class="nav-link">ABOUT</a>
-        <a href="#services" class="nav-link">SERVICES</a>
-        <a href="#social-gallery" class="nav-link">SOCIAL GALLERY</a>
-        <a href="#contact" class="nav-link">CONTACT</a>
+        <a href="#home" class="nav-link active" data-i18n="nav_home">HOME</a>
+        <a href="#about" class="nav-link" data-i18n="nav_about">ABOUT</a>
+        <a href="#services" class="nav-link" data-i18n="nav_services">SERVICES</a>
+        <a href="#social-gallery" class="nav-link" data-i18n="nav_gallery">SOCIAL GALLERY</a>
+        <a href="#contact" class="nav-link" data-i18n="nav_contact">CONTACT</a>
       </nav>
 
-      <!-- Desktop CTA Button -->
-      <a href="#contact" class="btn btn-primary btn-sm">GET A QUOTE</a>
+      <!-- Desktop CTA & Language Switcher -->
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button class="lang-toggle-btn langToggleBtn" aria-label="Toggle Language / تغيير اللغة">
+          <span class="flag-badge">🇶🇦</span> <span class="lang-text" data-i18n="lang_btn">العربية</span>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm" data-i18n="btn_get_quote">GET A QUOTE</a>
+      </div>
 
       <!-- Mobile Hamburger Toggle -->
       <button class="hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false">
@@ -52,18 +62,21 @@
       <div class="mobile-menu-brand">
         <img src="assets/logo/spark-joy-logo.png" alt="Spark Joy Event Management Official Logo" class="mobile-logo-img" />
       </div>
-      <a href="#home" class="nav-link">HOME</a>
-      <a href="#about" class="nav-link">ABOUT</a>
-      <a href="#services" class="nav-link">SERVICES</a>
-      <a href="#social-gallery" class="nav-link">SOCIAL GALLERY</a>
-      <a href="#contact" class="nav-link">CONTACT</a>
+      <a href="#home" class="nav-link" data-i18n="nav_home">HOME</a>
+      <a href="#about" class="nav-link" data-i18n="nav_about">ABOUT</a>
+      <a href="#services" class="nav-link" data-i18n="nav_services">SERVICES</a>
+      <a href="#social-gallery" class="nav-link" data-i18n="nav_gallery">SOCIAL GALLERY</a>
+      <a href="#contact" class="nav-link" data-i18n="nav_contact">CONTACT</a>
       <div class="mobile-menu-ctas">
-        <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center;">✨ GET A QUOTE</a>
+        <button class="lang-toggle-btn langToggleBtn" style="width: 100%; justify-content: center; padding: 12px; margin-bottom: 10px;">
+          <span class="flag-badge">🇶🇦</span> <span class="lang-text" data-i18n="lang_btn">العربية</span>
+        </button>
+        <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center;" data-i18n="btn_get_quote_sparkle">✨ GET A QUOTE</a>
         <a href="https://wa.me/97471716286?text=Hello%20Spark%20Joy!%20I%20would%20like%20to%20ask%20about%20booking%20an%20event%20in%20Qatar." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%; text-align: center; justify-content: center;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2C6.48 2 2 6.48 2 12C2 13.85 2.5 15.58 3.38 17.08L2 22L7.08 20.62C8.54 21.5 10.22 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C10.42 20 8.93 19.57 7.64 18.82L7.33 18.63L4.31 19.42L5.11 16.48L4.9 16.15C4.08 14.82 3.65 13.27 3.65 11.65C3.65 7.04 7.39 3.3 12 3.3C16.61 3.3 20.35 7.04 20.35 11.65C20.35 16.26 16.61 20 12 20ZM16.32 14.18C16.08 14.06 14.9 13.48 14.68 13.4C14.46 13.32 14.3 13.28 14.14 13.52C13.98 13.76 13.52 14.3 13.38 14.46C13.24 14.62 13.1 14.64 12.86 14.52C12.62 14.4 11.85 14.15 10.94 13.34C10.23 12.71 9.75 11.93 9.61 11.69C9.47 11.45 9.6 11.32 9.72 11.2C9.83 11.09 9.97 10.91 10.09 10.77C10.21 10.63 10.37 10.07 10.31 9.95C10.25 9.83 9.79 8.7 9.6 8.24C9.41 7.79 9.22 7.85 9.08 7.84C8.95 7.83 8.8 7.83 8.65 7.83C8.5 7.83 8.26 7.89 8.06 8.11C7.86 8.33 7.3 8.85 7.3 9.92C7.3 10.99 8.08 12.02 8.19 12.17C8.3 12.32 9.72 14.5 11.91 15.45C12.43 15.68 12.84 15.82 13.16 15.92C13.8 16.12 14.38 16.09 14.84 16.02C15.35 15.94 16.41 15.38 16.63 14.76C16.85 14.14 16.85 13.61 16.78 13.5C16.72 13.38 16.56 13.3 16.32 14.18Z"/>
           </svg>
-          <span>CHAT ON WHATSAPP</span>
+          <span data-i18n="btn_chat_whatsapp">CHAT ON WHATSAPP</span>
         </a>
       </div>
     </div>
@@ -92,16 +105,16 @@
         <div class="hero-brand-card">
           <img src="assets/logo/spark-joy-logo.png" alt="Official Spark Joy Event Management Logo" class="hero-brand-logo" />
         </div>
-        <div class="hero-badge">
+        <div class="hero-badge" data-i18n="hero_badge">
           <span>✨</span> Qatar's Premier Kids Event Management
         </div>
-        <h1 class="hero-title">LET US SPARK THE <span>JOY!</span></h1>
-        <p class="hero-subtitle">
+        <h1 class="hero-title" data-i18n="hero_title">LET US SPARK THE <span>JOY!</span></h1>
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
           Creating magical birthday celebrations, handcrafted piñatas, and engaging creative workshops for children and families across Qatar.
         </p>
 
         <!-- Qatar Trust & Location Strip -->
-        <div class="qatar-trust-bar">
+        <div class="qatar-trust-bar" data-i18n="hero_location">
           📍 <span style="font-weight: 800; color: var(--primary-pink);">Locations Served:</span> Doha <span class="location-dot">•</span> Lusail <span class="location-dot">•</span> Pearl-Qatar <span class="location-dot">•</span> West Bay <span class="location-dot">•</span> Al Rayyan <span class="location-dot">•</span> Al Waab
         </div>
 
@@ -110,9 +123,9 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2C6.48 2 2 6.48 2 12C2 13.85 2.5 15.58 3.38 17.08L2 22L7.08 20.62C8.54 21.5 10.22 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C10.42 20 8.93 19.57 7.64 18.82L7.33 18.63L4.31 19.42L5.11 16.48L4.9 16.15C4.08 14.82 3.65 13.27 3.65 11.65C3.65 7.04 7.39 3.3 12 3.3C16.61 3.3 20.35 7.04 20.35 11.65C20.35 16.26 16.61 20 12 20ZM16.32 14.18C16.08 14.06 14.9 13.48 14.68 13.4C14.46 13.32 14.3 13.28 14.14 13.52C13.98 13.76 13.52 14.3 13.38 14.46C13.24 14.62 13.1 14.64 12.86 14.52C12.62 14.4 11.85 14.15 10.94 13.34C10.23 12.71 9.75 11.93 9.61 11.69C9.47 11.45 9.6 11.32 9.72 11.2C9.83 11.09 9.97 10.91 10.09 10.77C10.21 10.63 10.25 10.53 10.33 10.37C10.41 10.21 10.37 10.07 10.31 9.95C10.25 9.83 9.79 8.7 9.6 8.24C9.41 7.79 9.22 7.85 9.08 7.84C8.95 7.83 8.8 7.83 8.65 7.83C8.5 7.83 8.26 7.89 8.06 8.11C7.86 8.33 7.3 8.85 7.3 9.92C7.3 10.99 8.08 12.02 8.19 12.17C8.3 12.32 9.72 14.5 11.91 15.45C12.43 15.68 12.84 15.82 13.16 15.92C13.8 16.12 14.38 16.09 14.84 16.02C15.35 15.94 16.41 15.38 16.63 14.76C16.85 14.14 16.85 13.61 16.78 13.5C16.72 13.38 16.56 13.3 16.32 14.18Z"/>
             </svg>
-            WHATSAPP US
+            <span data-i18n="btn_whatsapp_us">WHATSAPP US</span>
           </a>
-          <a href="#contact" class="btn btn-outline">
+          <a href="#contact" class="btn btn-outline" data-i18n="btn_book_event">
             ✨ BOOK YOUR EVENT
           </a>
         </div>

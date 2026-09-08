@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initQuotationForm();
   initServiceQuoteButtons();
   initScrollReveal();
+  initLanguageSwitcher();
 });
 
 /* ==========================================================================
@@ -1048,5 +1049,81 @@ function initServiceSlideGallery() {
     if (e.key === 'Escape') closeGallery();
     if (e.key === 'ArrowLeft') goToSlide(currentSlideIndex - 1);
     if (e.key === 'ArrowRight') goToSlide(currentSlideIndex + 1);
+  });
+}
+
+/* ==========================================================================
+   10. Language Switcher & Arabic Localization (Qatar Edition)
+   ========================================================================== */
+const i18nData = {
+  en: {
+    lang_btn: "العربية",
+    nav_home: "HOME",
+    nav_about: "ABOUT",
+    nav_services: "SERVICES",
+    nav_gallery: "SOCIAL GALLERY",
+    nav_contact: "CONTACT",
+    btn_get_quote: "GET A QUOTE",
+    btn_get_quote_sparkle: "✨ GET A QUOTE",
+    btn_chat_whatsapp: "CHAT ON WHATSAPP",
+    hero_badge: "<span>✨</span> Qatar's Premier Kids Event Management",
+    hero_title: "LET US SPARK THE <span>JOY!</span>",
+    hero_subtitle: "Creating magical birthday celebrations, handcrafted piñatas, and engaging creative workshops for children and families across Qatar.",
+    hero_location: "📍 <span style=\"font-weight: 800; color: var(--primary-pink);\">Locations Served:</span> Doha <span class=\"location-dot\">•</span> Lusail <span class=\"location-dot\">•</span> Pearl-Qatar <span class=\"location-dot\">•</span> West Bay <span class=\"location-dot\">•</span> Al Rayyan <span class=\"location-dot\">•</span> Al Waab",
+    btn_whatsapp_us: "WHATSAPP US",
+    btn_book_event: "✨ BOOK YOUR EVENT"
+  },
+  ar: {
+    lang_btn: "English",
+    nav_home: "الرئيسية",
+    nav_about: "من نحن",
+    nav_services: "خدماتنا",
+    nav_gallery: "معرض الصور",
+    nav_contact: "اتصل بنا",
+    btn_get_quote: "احصل على عرض سعر",
+    btn_get_quote_sparkle: "✨ احصل على عرض سعر",
+    btn_chat_whatsapp: "تحدث معنا عبر واتساب",
+    hero_badge: "<span>✨</span> الشركة الرائدة لتنظيم فعاليات الأطفال في قطر",
+    hero_title: "دعنا نشرك <span>الفرحة!</span>",
+    hero_subtitle: "نبتكر احتفالات أعياد ميلاد ساحرة، وبينياتا مصممة يدوياً، وورش عمل إبداعية وممتعة للأطفال والعائلات في جميع أنحاء قطر.",
+    hero_location: "📍 <span style=\"font-weight: 800; color: var(--primary-pink);\">مناطق الخدمة:</span> الدوحة <span class=\"location-dot\">•</span> لوسيل <span class=\"location-dot\">•</span> اللؤلؤة <span class=\"location-dot\">•</span> الخليج الغربي <span class=\"location-dot\">•</span> الريان <span class=\"location-dot\">•</span> الوعب",
+    btn_whatsapp_us: "تواصل عبر واتساب",
+    btn_book_event: "✨ احجز فعاليتك الآن"
+  }
+};
+
+function initLanguageSwitcher() {
+  let currentLang = localStorage.getItem('sparkjoy_lang') || 'en';
+
+  function applyLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('sparkjoy_lang', lang);
+    document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+    const dict = i18nData[lang] || i18nData.en;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key]) {
+        el.innerHTML = dict[key];
+      }
+    });
+
+    // Update button text labels
+    document.querySelectorAll('.langToggleBtn .lang-text').forEach(btnText => {
+      btnText.textContent = (lang === 'ar') ? 'English' : 'العربية';
+    });
+  }
+
+  // Initial language application
+  applyLanguage(currentLang);
+
+  // Attach event listener to language toggle buttons
+  document.querySelectorAll('.langToggleBtn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const nextLang = (currentLang === 'ar') ? 'en' : 'ar';
+      applyLanguage(nextLang);
+    });
   });
 }
