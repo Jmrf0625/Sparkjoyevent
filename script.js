@@ -246,84 +246,6 @@ function initQuotationForm() {
   const successCard = document.getElementById('quoteSuccessCard');
   if (!form) return;
 
-  const directWaBtn = document.getElementById('directWhatsappQuoteBtn');
-  const instantWaBtn = document.getElementById('instantWhatsappBtn');
-
-  // Helper to construct current formatted message
-  function getFormattedMessage() {
-    const name = document.getElementById('quoteName')?.value.trim() || '';
-    const phone = document.getElementById('quotePhone')?.value.trim() || '';
-    const email = document.getElementById('quoteEmail')?.value.trim() || '';
-    const date = document.getElementById('quoteDate')?.value.trim() || '';
-    const eventType = document.getElementById('quoteType')?.value || '';
-    const age = document.getElementById('quoteAge')?.value.trim() || '';
-    const guests = document.getElementById('quoteGuests')?.value.trim() || '';
-    const theme = document.getElementById('quoteTheme')?.value.trim() || '';
-    const notes = document.getElementById('quoteNotes')?.value.trim() || '';
-
-    const serviceBoxes = document.querySelectorAll('input[name="services"]:checked');
-    const services = Array.from(serviceBoxes).map(cb => cb.value);
-
-    let msg = `Hello Spark Joy Event Management! ✨\nI would like to ask about booking an event / requesting a quotation in Qatar:\n\n`;
-    if (name) msg += `👤 *Name:* ${name}\n`;
-    if (phone) msg += `📱 *Phone:* ${phone}\n`;
-    if (email) msg += `📧 *Email:* ${email}\n`;
-    if (date) msg += `📅 *Event Date:* ${date}\n`;
-    if (eventType) msg += `🎈 *Event Type:* ${eventType}\n`;
-    if (age) msg += `👶 *Child's Age:* ${age}\n`;
-    if (guests) msg += `👥 *Number of Guests:* ${guests}\n`;
-    if (theme) msg += `🎨 *Preferred Theme:* ${theme}\n`;
-    if (services.length > 0) msg += `⭐ *Services Needed:* ${services.join(', ')}\n`;
-    if (notes) msg += `📝 *Additional Details:* ${notes}\n`;
-
-    return msg;
-  }
-
-  // Update dynamic links in real time
-  function updateWhatsappLinks() {
-    const msg = getFormattedMessage();
-    const encoded = encodeURIComponent(msg);
-    const waUrl = `https://wa.me/97471716286?text=${encoded}`;
-
-    if (directWaBtn) directWaBtn.href = waUrl;
-    if (instantWaBtn) instantWaBtn.href = waUrl;
-  }
-
-  // Attach input & change listeners
-  form.querySelectorAll('input, select, textarea').forEach(input => {
-    input.addEventListener('input', updateWhatsappLinks);
-    input.addEventListener('change', updateWhatsappLinks);
-  });
-
-  // Preset Chips Handler
-  document.querySelectorAll('.preset-chip').forEach(chip => {
-    chip.addEventListener('click', () => {
-      const serviceName = chip.getAttribute('data-service');
-      const typeName = chip.getAttribute('data-type');
-
-      // Toggle active class on chips
-      document.querySelectorAll('.preset-chip').forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-
-      if (serviceName) {
-        const checkbox = Array.from(document.querySelectorAll('input[name="services"]'))
-          .find(cb => cb.value.toLowerCase().includes(serviceName.toLowerCase()) || serviceName.toLowerCase().includes(cb.value.toLowerCase()));
-        if (checkbox) checkbox.checked = true;
-      }
-
-      if (typeName) {
-        const selectEl = document.getElementById('quoteType');
-        if (selectEl) {
-          const matchingOpt = Array.from(selectEl.options).find(opt => opt.value.toLowerCase().includes(typeName.toLowerCase()));
-          if (matchingOpt) selectEl.value = matchingOpt.value;
-        }
-      }
-
-      updateWhatsappLinks();
-      showToast(`Selected service: ${serviceName || typeName} ✨`);
-    });
-  });
-
   window.submitQuoteForm = function(e) {
     if (e && e.preventDefault) e.preventDefault();
 
@@ -349,16 +271,35 @@ function initQuotationForm() {
     }
 
     const email = document.getElementById('quoteEmail')?.value.trim() || '';
+    const date = document.getElementById('quoteDate')?.value.trim() || '';
     const eventType = document.getElementById('quoteType')?.value || '';
+    const age = document.getElementById('quoteAge')?.value.trim() || '';
+    const guests = document.getElementById('quoteGuests')?.value.trim() || '';
+    const theme = document.getElementById('quoteTheme')?.value.trim() || '';
     const notes = document.getElementById('quoteNotes')?.value.trim() || '';
 
+    // Selected Services
     const serviceBoxes = document.querySelectorAll('input[name="services"]:checked');
     const services = Array.from(serviceBoxes).map(cb => cb.value);
 
-    const whatsappUrl = directWaBtn?.href || `https://wa.me/97471716286?text=${encodeURIComponent(getFormattedMessage())}`;
+    // Build WhatsApp Message
+    let message = `Hello Spark Joy Event Management! ✨\nI would like to ask about booking an event / requesting a quotation in Qatar:\n\n`;
+    if (name) message += `👤 *Name:* ${name}\n`;
+    if (phone) message += `📱 *Phone:* ${phone}\n`;
+    if (email) message += `📧 *Email:* ${email}\n`;
+    if (date) message += `📅 *Event Date:* ${date}\n`;
+    if (eventType) message += `🎈 *Event Type:* ${eventType}\n`;
+    if (age) message += `👶 *Child's Age:* ${age}\n`;
+    if (guests) message += `👥 *Number of Guests:* ${guests}\n`;
+    if (theme) message += `🎨 *Preferred Theme:* ${theme}\n`;
+    if (services.length > 0) message += `⭐ *Services Needed:* ${services.join(', ')}\n`;
+    if (notes) message += `📝 *Additional Details:* ${notes}\n`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/97471716286?text=${encodedMessage}`;
 
     // Show Toast Confirmation
-    showToast("Quote Request Formatted! Opening WhatsApp... ✨");
+    showToast("Quote Request Ready! Tap WhatsApp button to open chat... ✨");
 
     // Display In-Page Success Card
     if (successCard) {
@@ -369,7 +310,6 @@ function initQuotationForm() {
           <p class="success-subtitle">Thank you, <strong>${escapeHtml(name)}</strong>! We have formatted your event inquiry for Spark Joy Event Management Qatar.</p>
           
           <div class="quote-summary-box">
-            <div class="summary-item"><strong>Name:</strong> ${escapeHtml(name)}</div>
             <div class="summary-item"><strong>Phone / WhatsApp:</strong> ${escapeHtml(phone)}</div>
             ${services.length ? `<div class="summary-item"><strong>Services Needed:</strong> ${escapeHtml(services.join(', '))}</div>` : ''}
             ${eventType ? `<div class="summary-item"><strong>Event Type:</strong> ${escapeHtml(eventType)}</div>` : ''}
@@ -377,13 +317,13 @@ function initQuotationForm() {
           </div>
 
           <div class="success-actions">
-            <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-block-sm" style="padding: 16px 24px; font-weight: 700;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 6px;">
+            <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-block-sm">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2C6.48 2 2 6.48 2 12C2 13.85 2.5 15.58 3.38 17.08L2 22L7.08 20.62C8.54 21.5 10.22 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C10.42 20 8.93 19.57 7.64 18.82L7.33 18.63L4.31 19.42L5.11 16.48L4.9 16.15C4.08 14.82 3.65 13.27 3.65 11.65C3.65 7.04 7.39 3.3 12 3.3C16.61 3.3 20.35 7.04 20.35 11.65C20.35 16.26 16.61 20 12 20ZM16.32 14.18C16.08 14.06 14.9 13.48 14.68 13.4C14.46 13.32 14.3 13.28 14.14 13.52C13.98 13.76 13.52 14.3 13.38 14.46C13.24 14.62 13.1 14.64 12.86 14.52C12.62 14.4 11.85 14.15 10.94 13.34C10.23 12.71 9.75 11.93 9.61 11.69C9.47 11.45 9.6 11.32 9.72 11.2C9.83 11.09 9.97 10.91 10.09 10.77C10.21 10.63 10.37 10.07 10.31 9.95C10.25 9.83 9.79 8.7 9.6 8.24C9.41 7.79 9.22 7.85 9.08 7.84C8.95 7.83 8.8 7.83 8.65 7.83C8.5 7.83 8.26 7.89 8.06 8.11C7.86 8.33 7.3 8.85 7.3 9.92C7.3 10.99 8.08 12.02 8.19 12.17C8.3 12.32 9.72 14.5 11.91 15.45C12.43 15.68 12.84 15.82 13.16 15.92C13.8 16.12 14.38 16.09 14.84 16.02C15.35 15.94 16.41 15.38 16.63 14.76C16.85 14.14 16.85 13.61 16.78 13.5C16.72 13.38 16.56 13.3 16.32 14.18Z"/>
               </svg>
-              TAP TO OPEN WHATSAPP CHAT NOW
+              TAP TO OPEN WHATSAPP CHAT
             </a>
-            <button type="button" id="resetQuoteBtn" class="btn btn-outline btn-sm" style="margin-top: 10px;">Send Another Inquiry</button>
+            <button type="button" id="resetQuoteBtn" class="btn btn-outline btn-sm" style="margin-top: 12px;">Send Another Inquiry</button>
           </div>
         </div>
       `;
@@ -394,12 +334,10 @@ function initQuotationForm() {
       if (resetBtn) {
         resetBtn.addEventListener('click', () => {
           form.reset();
-          document.querySelectorAll('.preset-chip').forEach(c => c.classList.remove('active'));
           form.classList.remove('hidden');
           successCard.classList.add('hidden');
           const notice = document.getElementById('serviceSelectedNotice');
           if (notice) notice.classList.add('hidden');
-          updateWhatsappLinks();
         });
       }
     }
@@ -421,7 +359,6 @@ function initQuotationForm() {
   };
 
   form.addEventListener('submit', window.submitQuoteForm);
-  updateWhatsappLinks();
 }
 
 function escapeHtml(str) {
@@ -1198,12 +1135,6 @@ const I18N_TRANSLATIONS = {
     contact_tag: "GET IN TOUCH",
     contact_title: "Let's Create Something Magical",
     contact_subtitle: "Fill out your event details below and we will send a customized proposal directly to your WhatsApp in Qatar.",
-    quick_preset_label: "⚡ QUICK SELECT SERVICE:",
-    chip_pinatas: "🪅 Custom Piñatas",
-    chip_workshops: "🎨 Kids' Workshops",
-    chip_goodies: "🛍️ Goodie Bags",
-    chip_school: "🏫 School Events",
-    chip_crafts: "🖌️ Arts & Crafts",
     notice_tag: "SERVICE SELECTED",
     notice_desc: "Fill out your details below or tap the button to chat with us instantly on WhatsApp!",
     chat_whatsapp_btn: "CHAT ON WHATSAPP",
@@ -1237,9 +1168,7 @@ const I18N_TRANSLATIONS = {
     chk_corporate: "Corporate Children's Events",
     form_label_notes: "Additional Requirements / Venue Location in Qatar",
     form_placeholder_notes: "Tell us more about your venue in Qatar, special requests, or preferred timeline...",
-    form_btn_submit: "✨ REQUEST A QUOTE NOW",
-    or_divider: "— OR FOR INSTANT RESPONSE —",
-    btn_instant_wa_quote: "💬 CHAT INSTANTLY ON WHATSAPP (+974 7171 6286)",
+    form_btn_submit: "REQUEST A QUOTE",
 
     footer_tagline: '"Creating magical moments, one celebration at a time. ✨"',
     footer_desc: "Premier children's event management company based in Qatar, specializing in bespoke birthday parties, custom piñatas, and creative workshops.",
@@ -1344,12 +1273,6 @@ const I18N_TRANSLATIONS = {
     contact_tag: "تواصل معنا",
     contact_title: "لنصنع شيئاً ساحراً معاً",
     contact_subtitle: "أدخل بيانات فعاليتك أدناه وسنرسل لك عرض سعر مخصص مباشرة على الواتساب.",
-    quick_preset_label: "⚡ اختر الخدمة بشكل سريع:",
-    chip_pinatas: "🪅 بينياتا مخصصة",
-    chip_workshops: "🎨 ورش عمل للأطفال",
-    chip_goodies: "🛍️ أكياس هدايا",
-    chip_school: "🏫 فعاليات المدارس",
-    chip_crafts: "🖌️ أشغال يدوية",
     notice_tag: "الخدمة المحددة",
     notice_desc: "أدخل بياناتك أدناه أو اضغط على الزر للمحادثة المباشرة عبر الواتساب!",
     chat_whatsapp_btn: "المحادثة عبر الواتساب",
@@ -1383,9 +1306,7 @@ const I18N_TRANSLATIONS = {
     chk_corporate: "فعاليات الشركات للأطفال",
     form_label_notes: "متطلبات إضافية / موقع الحفل في قطر",
     form_placeholder_notes: "أخبرنا المزيد عن موقع الحفل في قطر، أو أي طلبات خاصة...",
-    form_btn_submit: "✨ طلب عرض سعر الآن",
-    or_divider: "— أو للاستجابة الفورية —",
-    btn_instant_wa_quote: "💬 محادثة فورية عبر الواتساب (+974 7171 6286)",
+    form_btn_submit: "طلب عرض سعر",
 
     footer_tagline: '"نصنع لحظات سحرية، احتفالاً تلو الآخر. ✨"',
     footer_desc: "الشركة الرائدة في تنظيم فعاليات الأطفال في قطر، المتخصصة في أعياد الميلاد المخصصة، البينياتا، وورش العمل.",

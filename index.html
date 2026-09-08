@@ -662,18 +662,6 @@
       </div>
 
       <div class="contact-wrapper">
-        <!-- Quick Select Category Chips -->
-        <div class="quick-quote-presets">
-          <span class="preset-label" data-i18n="quick_preset_label">⚡ QUICK SELECT SERVICE:</span>
-          <div class="preset-chips">
-            <button type="button" class="preset-chip" data-service="Custom Piñatas" data-type="Birthday Party" data-i18n="chip_pinatas">🪅 Custom Piñatas</button>
-            <button type="button" class="preset-chip" data-service="Kids’ Workshops" data-type="Kids Workshop" data-i18n="chip_workshops">🎨 Kids' Workshops</button>
-            <button type="button" class="preset-chip" data-service="Custom Goodie Bags" data-type="Birthday Party" data-i18n="chip_goodies">🛍️ Goodie Bags</button>
-            <button type="button" class="preset-chip" data-service="School Events" data-type="School Event" data-i18n="chip_school">🏫 School Events</button>
-            <button type="button" class="preset-chip" data-service="Arts & Crafts Activities" data-type="Birthday Party" data-i18n="chip_crafts">🖌️ Arts & Crafts</button>
-          </div>
-        </div>
-
         <!-- Dynamic Selected Service Notice (Shown when clicking "ASK FOR A QUOTE") -->
         <div id="serviceSelectedNotice" class="service-selected-notice hidden">
           <div class="notice-icon">✨</div>
@@ -690,7 +678,7 @@
           </a>
         </div>
 
-        <form id="quoteForm" novalidate>
+        <form id="quoteForm" novalidate onsubmit="if(window.submitQuoteForm) { window.submitQuoteForm(event); return false; }">
           <div class="form-grid">
             <!-- Full Name -->
             <div class="form-group">
@@ -778,17 +766,9 @@
               <textarea id="quoteNotes" class="form-control" placeholder="Tell us more about your venue in Qatar, special requests, or preferred timeline..." data-i18n-placeholder="form_placeholder_notes"></textarea>
             </div>
 
-            <!-- Submit Button & Direct WhatsApp Trigger -->
-            <div class="form-group full-width text-center" style="margin-top: 10px; display: flex; flex-direction: column; align-items: center; gap: 12px;">
-              <button type="submit" id="quoteSubmitBtn" class="btn btn-primary" style="width: 100%; max-width: 420px; font-weight: 700; padding: 16px 28px; font-size: 1.05rem;" data-i18n="form_btn_submit">✨ REQUEST A QUOTE NOW</button>
-              
-              <div class="quick-whatsapp-divider">
-                <span class="divider-text" data-i18n="or_divider">— OR FOR INSTANT RESPONSE —</span>
-              </div>
-
-              <a id="directWhatsappQuoteBtn" href="https://wa.me/97471716286?text=Hello%20Spark%20Joy%20Event%20Management!%20I%20would%20like%20to%20request%20a%20quote%20for%20my%20event%20in%20Qatar." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%; max-width: 420px; padding: 14px 24px; font-size: 0.98rem;" data-i18n="btn_instant_wa_quote">
-                💬 CHAT INSTANTLY ON WHATSAPP (+974 7171 6286)
-              </a>
+            <!-- Submit Button -->
+            <div class="form-group full-width text-center" style="margin-top: 10px;">
+              <button type="submit" id="quoteSubmitBtn" class="btn btn-primary" style="width: 100%; max-width: 380px;" data-i18n="form_btn_submit">REQUEST A QUOTE</button>
             </div>
           </div>
         </form>
